@@ -1,38 +1,12 @@
-import Link from 'next/link';
-import Button from '@/components/ui/Button';
+import HeroSection from '@/components/HeroSection';
 import Card from '@/components/ui/Card';
+import Button from '@/components/ui/Button';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-linear-to-br from-honda-red to-red-700 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Selamat Datang di <br />
-            <span className="text-yellow-300">Honda Prisma Surabaya</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Dealer Resmi Honda di Surabaya. Temukan mobil Honda impian Anda dengan harga terbaik dan pelayanan terpercaya.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/mobil">
-              <Button size="lg" variant="secondary">
-                🚗 Lihat Semua Mobil
-              </Button>
-            </Link>
-            <a
-              href={`https://wa.me/6287852432636?text=${encodeURIComponent('Halo, saya tertarik dengan mobil Honda. Bisa info lebih lanjut?')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" variant="outline">
-                💬 WhatsApp
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Features Section */}
       <section className="py-16 bg-white">

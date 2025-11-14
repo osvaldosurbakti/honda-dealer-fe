@@ -107,7 +107,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   // Basic Site Information
-  name: 'Honda Prisma HR Muhammad Surabaya',
+  name: 'Rendy Pambajeng Honda Surabaya',
   title: 'Dealer Resmi Honda Surabaya - Honda Prisma HR Muhammad',
   description: 'Dealer resmi Honda di Surabaya. Menjual berbagai tipe mobil Honda seperti HR-V, CR-V, Brio, Civic, dan lainnya. Melayani penjualan cash dan kredit dengan DP ringan.',
   keywords: [
@@ -120,14 +120,14 @@ export const siteConfig: SiteConfig = {
     'kredit mobil honda',
     'test drive honda',
   ],
-  author: 'Honda Prisma HR Muhammad Surabaya',
+  author: 'Rendy Pambajeng Honda Surabaya',
   url: 'https://hondaprismasurabaya.com',
   baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
 
   // Company Information
   company: {
-    name: 'Honda Prisma HR Muhammad Surabaya',
-    legalName: 'PT. Prisma Harapan Raya - Dealer Honda Surabaya',
+    name: 'Rendy Honda Surabaya',
+    legalName: 'PT. Honda Prisma - Dealer Honda Surabaya',
     description: 'Dealer resmi Honda yang telah berpengalaman melayani masyarakat Surabaya dan sekitarnya dengan komitmen memberikan pelayanan terbaik dan produk berkualitas.',
     foundingYear: 2010,
     dealerCode: 'HND-PRS-SBY',
@@ -135,17 +135,17 @@ export const siteConfig: SiteConfig = {
 
   // SEO Configuration
   seo: {
-    titleTemplate: '%s | Honda Prisma Surabaya',
+    titleTemplate: '%s | Rendy Pambajeng Honda Surabaya',
     defaultTitle: 'Dealer Resmi Honda Surabaya - Honda Prisma HR Muhammad',
     titleSeparator: '|',
     defaultDescription: 'Dealer resmi Honda di Surabaya. Penjualan mobil Honda cash dan kredit dengan DP ringan. Test drive gratis dan promo spesial setiap bulannya.',
     siteLanguage: 'id',
     openGraph: {
       type: 'website',
-      siteName: 'Honda Prisma HR Muhammad Surabaya',
+      siteName: 'Rendy Pambajeng Honda Surabaya',
       profile: {
-        firstName: 'Honda',
-        lastName: 'Prisma Surabaya',
+        firstName: 'Rendy',
+        lastName: 'Pambajeng',
       },
     },
   },

@@ -57,7 +57,7 @@ export interface ContactInfo {
 
 export const contactInfo: ContactInfo = {
   dealer: {
-    name: 'Honda Prisma HR Muhammad Surabaya',
+    name: 'Rendy Pambajeng Honda Surabaya',
     address: 'Jl. Raya Darmo Permai III, Surabaya',
     city: 'Surabaya',
     province: 'Jawa Timur',
@@ -70,12 +70,12 @@ export const contactInfo: ContactInfo = {
   phones: {
     primary: '087852432636',
     secondary: '031-1234567',
-    sales: ['087852432636', '085150655710', '085150655711'],
+    sales: ['087852432636'],
   },
   emails: {
     primary: 'rendyhondasurabaya@gmail.com',
-    sales: 'sales@hondaprismasurabaya.com',
-    info: 'info@hondaprismasurabaya.com',
+    sales: 'rendyhondasurabaya@gmail.com',
+    info: 'rendyhondasurabaya@gmail.com',
   },
   whatsapp: {
     number: '6287852432636',
@@ -94,51 +94,29 @@ export const contactInfo: ContactInfo = {
     ],
   },
   socialMedia: {
-    instagram: 'jasimhonda',
-    facebook: 'Fikra Awan',
-    // twitter: 'hondasurabaya', // Optional
-    // youtube: 'hondasurabaya', // Optional
+    //instagram: 'rendy',
+    facebook: 'Rendy Pambajeng',
+    tiktok: '@rendyhonda',
+    //twitter: 'hondasurabaya', // Optional
+    //youtube: 'hondasurabaya', // Optional
   },
   workingHours: {
-    days: 'Senin - Jumat',
-    hours: '08:00 - 17:00 WIB',
-    exception: 'Sabtu: 08:00 - 15:00 WIB',
+    days: 'Everyday',
+    hours: '24 Hours',
   },
   salesTeam: [
     {
       id: 'sales-1',
-      name: 'Fikra Awan',
+      name: 'Rendy Honda',
       position: 'Sales Consultant',
       phone: '087852432636',
       whatsapp: '6287852432636',
-      email: 'fikra@hondaprismasurabaya.com',
-      photo: '/images/sales/fikra-awan.jpg',
+      email: 'rendyhondasurabaya@gmail.com',
+      photo: '/images/sales/rendy.jpg',
       specialization: ['HR-V', 'CR-V', 'BR-V', 'SUV Models'],
       experience: '5 tahun',
       languages: ['Indonesia', 'English Basic'],
-    },
-    {
-      id: 'sales-2',
-      name: 'Budi Santoso',
-      position: 'Sales Consultant',
-      phone: '085150655710',
-      whatsapp: '6285150655710',
-      email: 'budi@hondaprismasurabaya.com',
-      specialization: ['Brio', 'Mobilio', 'Jazz', 'Hatchback Models'],
-      experience: '3 tahun',
-      languages: ['Indonesia', 'Javanese'],
-    },
-    {
-      id: 'sales-3',
-      name: 'Sari Dewi',
-      position: 'Sales Consultant',
-      phone: '085150655711',
-      whatsapp: '6285150655711',
-      email: 'sari@hondaprismasurabaya.com',
-      specialization: ['Civic', 'Accord', 'Sedan Models'],
-      experience: '4 tahun',
-      languages: ['Indonesia', 'English'],
-    },
+    }
   ],
 };
 
