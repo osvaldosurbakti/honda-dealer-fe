@@ -1,0 +1,56 @@
+import { Car } from '@/types/car';
+
+export const n7x: Car = {
+    id: 'brv-n7x-2024',
+    slug: 'all-new-br-v-n7x',
+    name: 'All New BR-V N7X',
+    model: 'BR-V N7X',
+    category: 'MPV',
+    priceRange: 'Rp 310 - 380 Juta',
+    startingPrice: 310000000,
+    typeCount: 3,
+    year: 2024,
+    images: {
+      main: '/images/cars/all-new-br-v-n7x/main.jpg',
+      gallery: [
+        '/images/cars/all-new-br-v-n7x/gallery-1.jpg',
+        '/images/cars/all-new-br-v-n7x/gallery-2.jpg',
+        '/images/cars/all-new-br-v-n7x/gallery-3.jpg',
+      ],
+      thumbnail: '/images/cars/all-new-br-v-n7x/thumbnail.jpg',
+      colorOptions: [
+        '/images/cars/all-new-br-v-n7x/colors/red.jpg',
+        '/images/cars/all-new-br-v-n7x/colors/black.jpg',
+        '/images/cars/all-new-br-v-n7x/colors/white.jpg',
+      ],
+    },
+    variants: [
+      {
+        id: 'brv-n7x-premium',
+        type: 'ALL NEW BR-V N7X PREMIUM',
+        price: 380000000,
+        priceFormatted: 'Rp 380.000.000',
+        features: [
+          '7-Seater Premium',
+          'Full LED Headlights',
+          '8-inch Touchscreen',
+          'Leather Seats',
+          '6 Airbags',
+          'Honda SENSING',
+        ],
+        transmission: 'CVT',
+        fuelType: 'Bensin',
+        engineCapacity: '1.5L',
+        available: true,
+      },
+    ],
+    description: 'All New BR-V N7X adalah varian premium dengan fitur dan teknologi terkini untuk pengalaman berkendara yang lebih eksklusif.',
+    shortDescription: 'Varian premium BR-V dengan fitur dan teknologi terkini.',
+    tags: ['MPV', 'Premium', '7-Seater', 'Honda SENSING'],
+    isFeatured: true,
+    isNew: true,
+    views: 678,
+    relatedCars: ['all-new-br-v', 'all-new-cr-v'],
+    createdAt: '2024-02-10',
+    updatedAt: '2024-02-10',
+  };

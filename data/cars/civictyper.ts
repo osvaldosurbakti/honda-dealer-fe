@@ -1,0 +1,56 @@
+import { Car } from "@/types/car";
+
+export const civicTypeR: Car =   {
+    id: 'civic-type-r-2024',
+    slug: 'all-new-civic-type-r',
+    name: 'All New Civic Type R',
+    model: 'Civic Type R',
+    category: 'Sport',
+    priceRange: 'Rp 1,2 - 1,5 Miliar',
+    startingPrice: 1200000000,
+    typeCount: 1,
+    year: 2024,
+    images: {
+      main: '/images/cars/all-new-civic-type-r/main.jpg',
+      gallery: [
+        '/images/cars/all-new-civic-type-r/gallery-1.jpg',
+        '/images/cars/all-new-civic-type-r/gallery-2.jpg',
+        '/images/cars/all-new-civic-type-r/gallery-3.jpg',
+      ],
+      thumbnail: '/images/cars/all-new-civic-type-r/thumbnail.jpg',
+      colorOptions: [
+        '/images/cars/all-new-civic-type-r/colors/red.jpg',
+        '/images/cars/all-new-civic-type-r/colors/white.jpg',
+        '/images/cars/all-new-civic-type-r/colors/blue.jpg',
+      ],
+    },
+    variants: [
+      {
+        id: 'civic-type-r',
+        type: 'ALL NEW CIVIC TYPE R',
+        price: 1500000000,
+        priceFormatted: 'Rp 1.500.000.000',
+        features: [
+          '2.0L VTEC Turbo Engine',
+          '6-speed Manual Transmission',
+          'Racing Bucket Seats',
+          'Brembo Brakes',
+          '20-inch Alloy Wheels',
+          'Type R Body Kit',
+        ],
+        transmission: 'Manual',
+        fuelType: 'Bensin',
+        engineCapacity: '2.0L Turbo',
+        available: true,
+      },
+    ],
+    description: 'All New Civic Type R adalah hatchback performa tinggi dengan teknologi balap terbaru, memberikan pengalaman berkendara yang ekstrem dan mendebarkan.',
+    shortDescription: 'Hatchback performa tinggi dengan teknologi balap untuk pengalaman berkendara ekstrem.',
+    tags: ['Sport', 'Performance', 'Type R', 'Turbo', 'Racing'],
+    isFeatured: true,
+    isNew: true,
+    views: 2345,
+    relatedCars: ['all-new-civic-e-hev-rs', 'city-hatchback-rs'],
+    createdAt: '2024-03-05',
+    updatedAt: '2024-03-05',
+  };

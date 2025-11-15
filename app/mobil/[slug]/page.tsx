@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { cars, getCarBySlug } from '@/data/cars';
+import { cars, getCarBySlug } from '@/data';
 import CarHero from '@/components/cars/CarHero';
 import CarQuickInfo from '@/components/cars/CarQuickInfo';
 import VariantsTable from '@/components/cars/VariantsTable';

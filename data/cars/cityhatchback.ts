@@ -1,0 +1,56 @@
+import {Car} from '@/types/car';
+
+export const cityhatchback: Car =   {
+    id: 'city-hatchback-rs-2024',
+    slug: 'city-hatchback-rs',
+    name: 'City Hatchback RS',
+    model: 'City',
+    category: 'Hatchback',
+    priceRange: 'Rp 350 - 420 Juta',
+    startingPrice: 350000000,
+    typeCount: 3,
+    year: 2024,
+    images: {
+      main: '/images/cars/city-hatchback-rs/main.jpg',
+      gallery: [
+        '/images/cars/city-hatchback-rs/gallery-1.jpg',
+        '/images/cars/city-hatchback-rs/gallery-2.jpg',
+        '/images/cars/city-hatchback-rs/gallery-3.jpg',
+      ],
+      thumbnail: '/images/cars/city-hatchback-rs/thumbnail.jpg',
+      colorOptions: [
+        '/images/cars/city-hatchback-rs/colors/red.jpg',
+        '/images/cars/city-hatchback-rs/colors/black.jpg',
+        '/images/cars/city-hatchback-rs/colors/white.jpg',
+      ],
+    },
+    variants: [
+      {
+        id: 'city-hatchback-rs-premium',
+        type: 'CITY HATCHBACK RS PREMIUM',
+        price: 420000000,
+        priceFormatted: 'Rp 420.000.000',
+        features: [
+          'RS Body Kit',
+          'LED Headlights dengan DRL',
+          '8-inch Touchscreen',
+          'Apple CarPlay & Android Auto',
+          '6 Airbags',
+          'Push Start Button',
+        ],
+        transmission: 'CVT',
+        fuelType: 'Bensin',
+        engineCapacity: '1.5L',
+        available: true,
+      },
+    ],
+    description: 'City Hatchback RS menghadirkan hatchback sporty dengan desain agresif khas RS dan fitur lengkap untuk mobilitas urban.',
+    shortDescription: 'Hatchback sporty dengan desain agresif khas RS untuk mobilitas urban.',
+    tags: ['Hatchback', 'Sport', 'RS', 'City Car', 'Premium'],
+    isFeatured: true,
+    isNew: true,
+    views: 987,
+    relatedCars: ['all-new-brio', 'all-new-civic-e-hev-rs'],
+    createdAt: '2024-03-01',
+    updatedAt: '2024-03-01',
+  };

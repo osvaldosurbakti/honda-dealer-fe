@@ -12,8 +12,6 @@ export interface ContactInfo {
   };
   phones: {
     primary: string;
-    secondary?: string;
-    sales: string[];
   };
   emails: {
     primary: string;
@@ -68,10 +66,8 @@ export const contactInfo: ContactInfo = {
     },
   },
   phones: {
-    primary: '087852432636',
-    secondary: '031-1234567',
-    sales: ['087852432636'],
-  },
+    primary: '087852432636'
+    },
   emails: {
     primary: 'rendyhondasurabaya@gmail.com',
     sales: 'rendyhondasurabaya@gmail.com',

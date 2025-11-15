@@ -17,12 +17,18 @@ export default function CarCard({ car }: CarCardProps) {
     }).format(price);
   };
 
+  // Fallback untuk data yang optional
+  const transmission = car.variants[0]?.transmission || 'CVT';
+  const fuelType = car.variants[0]?.fuelType || 'Bensin';
+  const seating = car.specs?.capacity?.seating || '5 Seater';
+  const engine = car.specs?.performance?.engine || '1.5L';
+
   return (
     <Card hover className="h-full flex flex-col">
       {/* Image Section */}
       <div className="relative h-48 bg-gray-100 rounded-t-xl overflow-hidden">
         <Image
-          src={car.images.main}
+          src={car.images.main || '/images/car-placeholder.jpg'}
           alt={car.name}
           fill
           className="object-cover hover:scale-105 transition duration-300"
@@ -37,7 +43,7 @@ export default function CarCard({ car }: CarCardProps) {
             </span>
           )}
           {car.isFeatured && (
-            <span className="bg-honda-red text-white text-xs px-2 py-1 rounded-full font-semibold">
+            <span className="bg-red-600 text-white text-xs px-2 py-1 rounded-full font-semibold">
               FEATURED
             </span>
           )}
@@ -74,7 +80,7 @@ export default function CarCard({ car }: CarCardProps) {
         {/* Price */}
         <div className="mb-4">
           <p className="text-sm text-gray-600 mb-1">Mulai dari</p>
-          <p className="text-xl font-bold text-honda-red">
+          <p className="text-xl font-bold text-red-600">
             {formatPrice(car.startingPrice)}
           </p>
           <p className="text-xs text-gray-500 mt-1">
@@ -85,30 +91,22 @@ export default function CarCard({ car }: CarCardProps) {
         {/* Features Preview */}
         <div className="mb-4 grow">
           <div className="grid grid-cols-2 gap-1 text-xs text-gray-600">
-            {car.variants[0]?.transmission && (
-              <div className="flex items-center space-x-1">
-                <span>⚙️</span>
-                <span>{car.variants[0].transmission}</span>
-              </div>
-            )}
-            {car.variants[0]?.fuelType && (
-              <div className="flex items-center space-x-1">
-                <span>⛽</span>
-                <span>{car.variants[0].fuelType}</span>
-              </div>
-            )}
-            {car.specs.capacity.seating && (
-              <div className="flex items-center space-x-1">
-                <span>👥</span>
-                <span>{car.specs.capacity.seating}</span>
-              </div>
-            )}
-            {car.specs.performance.engine && (
-              <div className="flex items-center space-x-1">
-                <span>🚀</span>
-                <span className="truncate">{car.specs.performance.engine}</span>
-              </div>
-            )}
+            <div className="flex items-center space-x-1">
+              <span>⚙️</span>
+              <span>{transmission}</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span>⛽</span>
+              <span>{fuelType}</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span>👥</span>
+              <span>{seating}</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span>🚀</span>
+              <span className="truncate">{engine}</span>
+            </div>
           </div>
         </div>
 
@@ -116,7 +114,7 @@ export default function CarCard({ car }: CarCardProps) {
         <div className="flex space-x-2 mt-auto">
           <Link 
             href={`/mobil/${car.slug}`}
-            className="flex-1 bg-honda-red text-white text-center py-2 px-3 rounded-lg font-semibold hover:bg-red-700 transition text-sm"
+            className="flex-1 bg-red-600 text-white text-center py-2 px-3 rounded-lg font-semibold hover:bg-red-700 transition text-sm"
           >
             Detail
           </Link>

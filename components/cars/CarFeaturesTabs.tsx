@@ -4,24 +4,31 @@ import { useState } from 'react';
 import { CarFeatureSections, CarSpecs } from '@/types/car';
 
 interface CarFeaturesTabsProps {
-  features: CarFeatureSections;
-  specs: CarSpecs;
+  features?: CarFeatureSections;
+  specs?: CarSpecs;
 }
 
 export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProps) {
   const [activeTab, setActiveTab] = useState('exterior');
 
-  const tabs = [
-    { id: 'exterior', label: 'Eksterior', emoji: '🚗' },
-    { id: 'interior', label: 'Interior', emoji: '🛋️' },
-    { id: 'safety', label: 'Keselamatan', emoji: '🛡️' },
-    { id: 'technology', label: 'Teknologi', emoji: '🔧' },
-    { id: 'specs', label: 'Spesifikasi', emoji: '📊' },
-  ];
+  // Filter tabs berdasarkan data yang tersedia
+  const availableTabs = [
+    features?.exterior && { id: 'exterior', label: 'Eksterior', emoji: '🚗' },
+    features?.interior && { id: 'interior', label: 'Interior', emoji: '🛋️' },
+    features?.safety && { id: 'safety', label: 'Keselamatan', emoji: '🛡️' },
+    features?.technology && { id: 'technology', label: 'Teknologi', emoji: '🔧' },
+    specs && { id: 'specs', label: 'Spesifikasi', emoji: '📊' },
+  ].filter(Boolean) as { id: string; label: string; emoji: string }[];
+
+  // Set active tab pertama yang tersedia jika activeTab tidak tersedia
+  if (availableTabs.length > 0 && !availableTabs.find(tab => tab.id === activeTab)) {
+    setActiveTab(availableTabs[0].id);
+  }
 
   const renderContent = () => {
     switch (activeTab) {
       case 'exterior':
+        if (!features?.exterior) return null;
         return (
           <div>
             <h3 className="text-2xl font-bold mb-4">{features.exterior.title}</h3>
@@ -38,6 +45,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         );
 
       case 'interior':
+        if (!features?.interior) return null;
         return (
           <div>
             <h3 className="text-2xl font-bold mb-4">{features.interior.title}</h3>
@@ -54,6 +62,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         );
 
       case 'safety':
+        if (!features?.safety) return null;
         return (
           <div>
             <h3 className="text-2xl font-bold mb-4">{features.safety.title}</h3>
@@ -70,6 +79,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         );
 
       case 'technology':
+        if (!features?.technology) return null;
         return (
           <div>
             <h3 className="text-2xl font-bold mb-4">{features.technology.title}</h3>
@@ -86,6 +96,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         );
 
       case 'specs':
+        if (!specs) return null;
         return (
           <div>
             <h3 className="text-2xl font-bold mb-6">Spesifikasi Teknis</h3>
@@ -151,16 +162,31 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         );
 
       default:
-        return null;
+        return (
+          <div className="text-center py-12">
+            <p className="text-gray-500">Data tidak tersedia</p>
+          </div>
+        );
     }
   };
+
+  // Jika tidak ada data sama sekali
+  if (availableTabs.length === 0) {
+    return (
+      <section className="bg-white py-12">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-500">Fitur dan spesifikasi belum tersedia</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="bg-white py-12">
       <div className="container mx-auto px-4">
         {/* Tabs Navigation */}
         <div className="flex overflow-x-auto mb-8 border-b">
-          {tabs.map((tab) => (
+          {availableTabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}

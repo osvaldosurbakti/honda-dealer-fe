@@ -6,6 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   isLoading?: boolean;
   fullWidth?: boolean;
+  // Hapus asChild karena tidak digunakan
 }
 
 const variantStyles = {
@@ -34,19 +35,15 @@ export default function Button({
 }: ButtonProps) {
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
-  const widthStyle = fullWidth ? 'w-full' : '';
-  
-  const combinedClassName = `
-    ${baseStyles}
-    ${variantStyles[variant]}
-    ${sizeStyles[size]}
-    ${widthStyle}
-    ${className}
-  `.trim();
-
   return (
     <button
-      className={combinedClassName}
+      className={`
+        ${baseStyles}
+        ${variantStyles[variant]}
+        ${sizeStyles[size]}
+        ${fullWidth ? 'w-full' : ''}
+        ${className}
+      `.replace(/\s+/g, ' ').trim()}
       disabled={disabled || isLoading}
       {...props}
     >

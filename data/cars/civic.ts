@@ -1,0 +1,56 @@
+import { Car } from '@/types/car';
+
+export const civic: Car =   {
+    id: 'civic-e-hev-rs-2024',
+    slug: 'all-new-civic-e-hev-rs',
+    name: 'All New Civic e:HEV RS',
+    model: 'Civic',
+    category: 'Sedan',
+    priceRange: 'Rp 680 - 750 Juta',
+    startingPrice: 680000000,
+    typeCount: 2,
+    year: 2024,
+    images: {
+      main: '/images/cars/all-new-civic-e-hev-rs/main.jpg',
+      gallery: [
+        '/images/cars/all-new-civic-e-hev-rs/gallery-1.jpg',
+        '/images/cars/all-new-civic-e-hev-rs/gallery-2.jpg',
+        '/images/cars/all-new-civic-e-hev-rs/gallery-3.jpg',
+      ],
+      thumbnail: '/images/cars/all-new-civic-e-hev-rs/thumbnail.jpg',
+      colorOptions: [
+        '/images/cars/all-new-civic-e-hev-rs/colors/red.jpg',
+        '/images/cars/all-new-civic-e-hev-rs/colors/black.jpg',
+        '/images/cars/all-new-civic-e-hev-rs/colors/white.jpg',
+      ],
+    },
+    variants: [
+      {
+        id: 'civic-e-hev-rs',
+        type: 'ALL NEW CIVIC e:HEV RS',
+        price: 750000000,
+        priceFormatted: 'Rp 750.000.000',
+        features: [
+          'RS Body Kit',
+          'Hybrid System',
+          'Full LED Headlights',
+          '10.2-inch Digital Cluster',
+          'Bose Premium Audio',
+          'Honda SENSING',
+        ],
+        transmission: 'CVT',
+        fuelType: 'Hybrid',
+        engineCapacity: '2.0L',
+        available: true,
+      },
+    ],
+    description: 'All New Civic e:HEV RS menghadirkan sedan sport hybrid dengan performa tangguh dan desain agresif khas RS.',
+    shortDescription: 'Sedan sport hybrid dengan desain agresif khas RS dan performa tangguh.',
+    tags: ['Sedan', 'Hybrid', 'Sport', 'RS', 'Premium'],
+    isFeatured: true,
+    isNew: true,
+    views: 1567,
+    relatedCars: ['all-new-civic-type-r', 'city-hatchback-rs'],
+    createdAt: '2024-02-25',
+    updatedAt: '2024-02-25',
+  };

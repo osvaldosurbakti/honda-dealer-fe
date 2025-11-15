@@ -1,18 +1,31 @@
-import HeroSection from '@/components/HeroSection';
+import HeroSection from '@/components/home/HeroSection';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import ProductCarousel from '@/components/home/ProductCarousel';
+import { getFeaturedCars, getAllCars } from '@/data';
+import Link from 'next/link';
 
 export default function Home() {
+  const featuredCars = getFeaturedCars();
+  const allCars = getAllCars();
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <HeroSection />
 
+      {/* All Products Carousel */}
+      <ProductCarousel 
+        cars={allCars}
+        title="Semua Model Honda"
+        description="Jelajahi seluruh lineup mobil Honda dengan berbagai pilihan kategori dan harga"
+      />
+
       {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Mengapa Memilih Honda Prisma Surabaya?
+            Mengapa Memilih Rendy Honda Surabaya?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hover className="text-center">
@@ -66,6 +79,11 @@ export default function Home() {
                 📞 Telepon Sekarang
               </Button>
             </a>
+            <Link href="/produk">
+              <Button size="lg" variant="outline">
+                🚗 Lihat Semua Produk
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -37,7 +37,7 @@ export interface CarSpecs {
     luggage: string;
     doors: string;
   };
-  features: {
+  features?: { // Made optional
     exterior: string[];
     interior: string[];
     safety: string[];
@@ -47,25 +47,25 @@ export interface CarSpecs {
 
 // Car Feature Sections Type
 export interface CarFeatureSections {
-  exterior: {
+  exterior?: {
     title: string;
     description: string;
     features: string[];
     images: string[];
   };
-  interior: {
+  interior?: {
     title: string;
     description: string;
     features: string[];
     images: string[];
   };
-  safety: {
+  safety?: {
     title: string;
     description: string;
     features: string[];
     images: string[];
   };
-  technology: {
+  technology?: {
     title: string;
     description: string;
     features: string[];
@@ -91,8 +91,8 @@ export interface Car {
     colorOptions: string[];
   };
   variants: CarVariant[];
-  specs: CarSpecs;
-  features: CarFeatureSections;
+  specs?: CarSpecs; // Made optional since some new cars don't have full specs
+  features?: CarFeatureSections; // Made optional since some new cars don't have full features
   description: string;
   shortDescription: string;
   tags: string[];

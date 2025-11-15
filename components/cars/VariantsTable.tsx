@@ -52,16 +52,6 @@ export default function VariantsTable({ variants, carName }: VariantsTableProps)
               </div>
             </div>
             
-            <div className="flex items-end">
-              <a
-                href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo, saya tertarik dengan ${carName} tipe ${variants[selectedVariant].type}. Bisa info lebih detail?`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition text-center"
-              >
-                💬 Tanya via WhatsApp
-              </a>
-            </div>
           </div>
         </div>
 
