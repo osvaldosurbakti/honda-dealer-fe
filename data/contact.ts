@@ -39,6 +39,10 @@ export interface ContactInfo {
     hours: string;
     exception?: string;
   };
+  maps: {
+    embedUrl: string;
+    directUrl: string;
+  };
   salesTeam: {
     id: string;
     name: string;
@@ -56,7 +60,7 @@ export interface ContactInfo {
 export const contactInfo: ContactInfo = {
   dealer: {
     name: 'Rendy Pambajeng Honda Surabaya',
-    address: 'Jl. Raya Darmo Permai III, Surabaya',
+    address: ' Jl. Mayjen HR. Muhammad No.2B, Putat Gede, Kec. Sukomanunggal, Surabaya, Jawa Timur',
     city: 'Surabaya',
     province: 'Jawa Timur',
     postalCode: '60189',
@@ -100,6 +104,10 @@ export const contactInfo: ContactInfo = {
     days: 'Everyday',
     hours: '24 Hours',
   },
+    maps: {
+    embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63321.62517524256!2d112.66129752283722!3d-7.286090828765811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fda9b71de18d%3A0xcbf8ea89e4e029af!2sHonda%20Prisma%20HR%20Muhammad!5e0!3m2!1sen!2sid!4v1763277260243!5m2!1sen!2sid',
+    directUrl: 'https://maps.google.com/?q=Honda+Prisma+HR+Muhammad'
+  },
   salesTeam: [
     {
       id: 'sales-1',
@@ -114,6 +122,7 @@ export const contactInfo: ContactInfo = {
       languages: ['Indonesia', 'English Basic'],
     }
   ],
+  
 };
 
 // Helper functions

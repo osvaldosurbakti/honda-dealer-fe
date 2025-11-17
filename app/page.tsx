@@ -18,7 +18,6 @@ export default function Home() {
       <ProductCarousel 
         cars={allCars}
         title="Semua Model Honda"
-        description="Jelajahi seluruh lineup mobil Honda dengan berbagai pilihan kategori dan harga"
       />
 
       {/* Features Section */}
@@ -79,7 +78,7 @@ export default function Home() {
                 📞 Telepon Sekarang
               </Button>
             </a>
-            <Link href="/produk">
+            <Link href="/mobil">
               <Button size="lg" variant="outline">
                 🚗 Lihat Semua Produk
               </Button>

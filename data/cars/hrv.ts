@@ -11,20 +11,20 @@ export const hrv: Car = {
   typeCount: 4,
   year: 2024,
   images: {
-    main: '/images/cars/new-hr-v/main.jpg',
+    main: '/images/cars/all-new-hr-v/main.jpg',
     gallery: [
-      '/images/cars/new-hr-v/gallery-1.jpg',
-      '/images/cars/new-hr-v/gallery-2.jpg',
-      '/images/cars/new-hr-v/gallery-3.jpg',
-      '/images/cars/new-hr-v/gallery-4.jpg',
+      '/images/cars/all-new-hr-v/gallery-1.jpg',
+      '/images/cars/all-new-hr-v/gallery-2.jpg',
+      '/images/cars/all-new-hr-v/gallery-3.jpg',
+      '/images/cars/all-new-hr-v/gallery-4.jpg',
     ],
-    thumbnail: '/images/cars/new-hr-v/thumbnail.jpg',
+    thumbnail: '/images/cars/all-new-hr-v/thumbnail.jpg',
     colorOptions: [
-      '/images/cars/new-hr-v/colors/red.jpg',
-      '/images/cars/new-hr-v/colors/black.jpg',
-      '/images/cars/new-hr-v/colors/white.jpg',
-      '/images/cars/new-hr-v/colors/gray.jpg',
-      '/images/cars/new-hr-v/colors/silver.jpg',
+      '/images/cars/all-new-hr-v/colors/red.jpg',
+      '/images/cars/all-new-hr-v/colors/black.jpg',
+      '/images/cars/all-new-hr-v/colors/white.jpg',
+      '/images/cars/all-new-hr-v/colors/gray.jpg',
+      '/images/cars/all-new-hr-v/colors/silver.jpg',
     ],
   },
   variants: [
@@ -168,8 +168,8 @@ export const hrv: Car = {
         'Two-Tone Color Options',
       ],
       images: [
-        '/images/cars/new-hr-v/features/exterior-1.jpg',
-        '/images/cars/new-hr-v/features/exterior-2.jpg',
+        '/images/cars/all-new-hr-v/features/exterior-1.jpg',
+        '/images/cars/all-new-hr-v/features/exterior-2.jpg',
       ],
     },
     interior: {
@@ -184,8 +184,8 @@ export const hrv: Car = {
         'Multi-View Camera (E+)',
       ],
       images: [
-        '/images/cars/new-hr-v/features/interior-1.jpg',
-        '/images/cars/new-hr-v/features/interior-2.jpg',
+        '/images/cars/all-new-hr-v/features/interior-1.jpg',
+        '/images/cars/all-new-hr-v/features/interior-2.jpg',
       ],
     },
     safety: {
@@ -200,8 +200,8 @@ export const hrv: Car = {
         'Parking Sensors (E+)',
       ],
       images: [
-        '/images/cars/new-hr-v/features/safety-1.jpg',
-        '/images/cars/new-hr-v/features/safety-2.jpg',
+        '/images/cars/all-new-hr-v/features/safety-1.jpg',
+        '/images/cars/all-new-hr-v/features/safety-2.jpg',
       ],
     },
   },

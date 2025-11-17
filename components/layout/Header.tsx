@@ -153,9 +153,9 @@ export default function Header() {
               onClick={() => setActiveNav('/')}
             >
               <div className="relative">
-                <div className="relative w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-honda-red to-red-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-500 border-2 border-white overflow-hidden">
+                <div className="relative w-12 h-12 lg:w-14 lg:h-14 bg-linear-to-br from-honda-red to-red-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-500 border-2 border-white overflow-hidden">
                   {/* Animated Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-honda-red/0 via-white/20 to-honda-red/0 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-honda-red/0 via-white/20 to-honda-red/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   
                   {/* Subtle Pulse */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-white/0 group-hover:border-white/30 transition-all duration-500 animate-pulse"></div>

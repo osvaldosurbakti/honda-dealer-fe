@@ -142,7 +142,7 @@ export default function KontakPage() {
             </div>
 
             {/* Test Drive CTA */}
-            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-xl p-6 mt-6 text-center">
+            <div className="bg-linear-to-r from-red-600 to-red-700 text-white rounded-xl p-6 mt-6 text-center">
               <h3 className="text-xl font-semibold mb-2">
                 🚗 Ingin Test Drive?
               </h3>

@@ -1,50 +1,169 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { Car } from '@/types/car';
 import ProductCard from './ProductCard';
 import Button from '@/components/ui/Button';
+import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 
 interface ProductCarouselProps {
-  cars: Car[];
+  cars?: Car[];
   title?: string;
   description?: string;
+  autoPlay?: boolean;
+  showControls?: boolean;
+  speed?: number; // seconds for one complete loop
 }
 
 export default function ProductCarousel({ 
-  cars, 
+  cars = [],
   title = "Mobil Honda Terbaru",
-  description = "Temukan mobil Honda impian Anda dengan teknologi terkini dan desain terbaru"
+  description = "Temukan mobil Honda impian Anda dengan teknologi terkini dan desain terbaru",
+  autoPlay = true,
+  showControls = true,
+  speed = 30 // 30 seconds for one complete loop
 }: ProductCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [currentSet, setCurrentSet] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<Animation | null>(null);
 
-  // Konfigurasi responsive
-  const getItemsPerView = () => {
-    if (typeof window === 'undefined') return 3;
-    if (window.innerWidth < 768) return 1;
-    if (window.innerWidth < 1024) return 2;
-    return 3;
-  };
+  // Validasi cars data
+  const validCars = Array.isArray(cars) ? cars : [];
 
-  const itemsPerView = getItemsPerView();
-  const maxIndex = Math.max(0, cars.length - itemsPerView);
+  // Duplicate data untuk infinite effect
+  const infiniteData = [...validCars, ...validCars];
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
-  };
+  // Setup CSS animation
+  useEffect(() => {
+    if (!carouselRef.current || validCars.length === 0) return;
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => Math.max(prev - 1, 0));
-  };
+    const track = carouselRef.current;
+    const trackWidth = track.scrollWidth / 2; // Karena data diduplikasi
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(Math.max(0, Math.min(index, maxIndex)));
-  };
+    // Setup CSS animation
+    const animation = track.animate(
+      [
+        { transform: 'translateX(0)' },
+        { transform: `translateX(-${trackWidth}px)` }
+      ],
+      {
+        duration: speed * 1000,
+        iterations: Infinity,
+        easing: 'linear'
+      }
+    );
 
-  // Calculate visible cars
-  const visibleCars = cars.slice(currentIndex, currentIndex + itemsPerView);
+    animationRef.current = animation;
+
+    if (isPaused) {
+      animation.pause();
+    } else if (!autoPlay) {
+      animation.pause();
+    }
+
+    return () => {
+      animation.cancel();
+    };
+  }, [validCars.length, speed, isPaused, autoPlay]);
+
+  // Handle manual pause/play
+  const togglePlay = useCallback(() => {
+    setIsPaused(!isPaused);
+  }, [isPaused]);
+
+  // Manual navigation
+  const scrollToItem = useCallback((index: number) => {
+    if (!carouselRef.current || validCars.length === 0) return;
+
+    const track = carouselRef.current;
+    const itemWidth = track.children[0]?.clientWidth || 0;
+    const scrollPosition = index * itemWidth;
+
+    // Smooth scroll to position
+    track.style.transform = `translateX(-${scrollPosition}px)`;
+    track.style.transition = 'transform 0.5s ease-in-out';
+
+    // Reset animation after manual scroll
+    if (animationRef.current) {
+      animationRef.current.cancel();
+      
+      // Restart animation after a delay if autoPlay is enabled
+      if (autoPlay && !isPaused) {
+        setTimeout(() => {
+          if (carouselRef.current && animationRef.current) {
+            const newAnimation = carouselRef.current.animate(
+              [
+                { transform: `translateX(-${scrollPosition}px)` },
+                { transform: `translateX(-${scrollPosition + (carouselRef.current.scrollWidth / 2)}px)` }
+              ],
+              {
+                duration: speed * 1000,
+                iterations: Infinity,
+                easing: 'linear'
+              }
+            );
+            animationRef.current = newAnimation;
+          }
+        }, 500);
+      }
+    }
+  }, [validCars.length, autoPlay, isPaused, speed]);
+
+  // Handle hover events
+  const handleMouseEnter = useCallback(() => {
+    if (animationRef.current && autoPlay) {
+      animationRef.current.pause();
+    }
+  }, [autoPlay]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (animationRef.current && autoPlay && !isPaused) {
+      animationRef.current.play();
+    }
+  }, [autoPlay, isPaused]);
+
+  // Reset animation when data changes
+  useEffect(() => {
+    if (animationRef.current) {
+      animationRef.current.cancel();
+    }
+  }, [validCars]);
+
+  // Loading state jika tidak ada data
+  if (validCars.length === 0) {
+    return (
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {title}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              {description}
+            </p>
+          </div>
+          <div className="text-center py-12">
+            <div className="text-gray-500 text-lg">
+              Tidak ada mobil yang tersedia saat ini.
+            </div>
+            <div className="mt-6">
+              <Button size="lg" variant="primary">
+                <Link href="/mobil" className="flex items-center space-x-2">
+                  <span>Jelajahi Semua Mobil</span>
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Jika hanya ada 1-2 items, tidak perlu infinite scroll
+  const shouldAnimate = validCars.length > 2 && autoPlay;
 
   return (
     <section className="py-16 bg-gray-50">
@@ -61,69 +180,123 @@ export default function ProductCarousel({
 
         {/* Carousel Container */}
         <div className="relative">
-          {/* Navigation Buttons */}
-          {currentIndex > 0 && (
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white hover:bg-gray-100 border border-gray-300 rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-              aria-label="Slide sebelumnya"
-            >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
+          {/* Controls */}
+          {showControls && validCars.length > 2 && (
+            <div className="flex justify-center items-center gap-4 mb-6">
+              <button
+                onClick={togglePlay}
+                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                aria-label={isPaused ? 'Putar carousel' : 'Jeda carousel'}
+              >
+                {isPaused ? (
+                  <>
+                    <Play className="w-4 h-4" />
+                    <span>Putar</span>
+                  </>
+                ) : (
+                  <>
+                    <Pause className="w-4 h-4" />
+                    <span>Jeda</span>
+                  </>
+                )}
+              </button>
+              
+              <div className="text-sm text-gray-600">
+                {validCars.length} mobil • Scroll tanpa batas
+              </div>
+            </div>
           )}
 
-          {currentIndex < maxIndex && (
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white hover:bg-gray-100 border border-gray-300 rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-              aria-label="Slide berikutnya"
+          {/* Carousel Track dengan Infinite Scroll */}
+          <div className="relative overflow-hidden">
+            {/* Gradient Overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+            
+            {/* Infinite Carousel Track */}
+            <div
+              ref={carouselRef}
+              className="flex gap-8 pb-6"
+              style={{
+                width: 'max-content',
+                animation: shouldAnimate && !isPaused 
+                  ? `infiniteScrollHorizontal ${speed}s linear infinite` 
+                  : 'none'
+              }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+              {infiniteData.map((car, index) => (
+                <div 
+                  key={`${car.id}-${index}`} 
+                  className="flex-shrink-0 w-80"
+                >
+                  <ProductCard car={car} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Manual Navigation Dots */}
+          {validCars.length > 1 && (
+            <div className="flex justify-center mt-8 space-x-2">
+              {validCars.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToItem(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSet % validCars.length
+                      ? 'bg-red-600 scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Pergi ke mobil ${index + 1}`}
+                />
+              ))}
+            </div>
           )}
 
-          {/* Carousel Track */}
-          <div 
-            ref={carouselRef}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500 ease-in-out"
-          >
-            {visibleCars.map((car) => (
-              <ProductCard key={car.id} car={car} />
-            ))}
+          {/* Auto-play Status */}
+          <div className="flex justify-center items-center mt-4 space-x-3">
+            <span className="text-sm text-gray-600">
+              {validCars.length} mobil tersedia
+            </span>
+            {autoPlay && (
+              <>
+                <div className={`w-2 h-2 rounded-full ${!isPaused ? 'bg-green-500 animate-pulse' : 'bg-gray-400'}`} />
+                <span className="text-xs text-gray-500">
+                  {!isPaused ? 'Auto-scroll aktif' : 'Auto-scroll dijeda'}
+                </span>
+              </>
+            )}
           </div>
         </div>
 
-        {/* Dots Indicator */}
-        {maxIndex > 0 && (
-          <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-red-600 scale-125' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        )}
-
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button size="lg" variant="primary" >
-            <Link href="/mobil">
-              Lihat Semua Mobil Honda
+          <Button size="lg" variant="primary">
+            <Link href="/mobil" className="flex items-center space-x-2">
+              <span>Lihat Semua Mobil Honda</span>
+              <ChevronRight className="w-4 h-4" />
             </Link>
           </Button>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes infiniteScrollHorizontal {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-50%));
+          }
+        }
+
+        /* Smooth scrolling for manual navigation */
+        .smooth-scroll {
+          transition: transform 0.5s ease-in-out;
+        }
+      `}</style>
     </section>
   );
 }

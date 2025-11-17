@@ -30,7 +30,7 @@ export default function Footer() {
               
               {/* Logo & Company */}
               <div className="flex items-center space-x-2 lg:space-x-3">
-                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-honda-red to-red-600 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-linear-to-br from-honda-red to-red-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Image
                     src="/images/logos/honda-logo.svg"
                     alt="Honda Official Dealer"

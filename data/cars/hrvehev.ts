@@ -12,7 +12,7 @@ export const hrvehev: Car =
     typeCount: 2,
     year: 2024,
     images: {
-      main: '/images/cars/all-new-hr-v/main.jpg',
+      main: '/images/cars/all-new-hr-v-e-hev/main.jpg',
       gallery: [
         '/images/cars/all-new-hr-v-e-hev/gallery-1.jpg',
         '/images/cars/all-new-hr-v-e-hev/gallery-2.jpg',
