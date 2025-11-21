@@ -152,8 +152,8 @@ export const siteConfig: SiteConfig = {
 
   // Social Media Links
   social: {
-    instagram: 'https://instagram.com/jasimhonda',
-    facebook: 'https://facebook.com/fikra.awan',
+    // instagram: 'https://instagram.com/jasimhonda',
+    facebook: 'https://www.facebook.com/share/1CThcKHE5Z/',
     // twitter: 'https://twitter.com/hondasurabaya',
     // youtube: 'https://youtube.com/hondasurabaya',
   },

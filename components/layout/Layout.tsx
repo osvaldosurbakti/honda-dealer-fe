@@ -12,7 +12,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow">
+      <main className="grow">
         {children}
       </main>
       <PreFooter /> {/* 👈 PREFOOTER DITAMBAHKAN DI SINI */}

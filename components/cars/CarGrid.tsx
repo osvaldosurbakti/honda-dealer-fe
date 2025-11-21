@@ -27,7 +27,7 @@ export default function CarGrid({ cars, loading = false }: CarGridProps) {
           Mobil tidak ditemukan
         </h3>
         <p className="text-gray-500">
-          Coba gunakan filter yang berbeda atau hubungi sales kami untuk informasi lebih lanjut.
+          Coba gunakan filter yang berbeda atau hubungi Rendy untuk informasi lebih lanjut.
         </p>
       </div>
     );

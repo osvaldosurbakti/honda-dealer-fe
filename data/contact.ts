@@ -95,7 +95,7 @@ export const contactInfo: ContactInfo = {
   },
   socialMedia: {
     //instagram: 'rendy',
-    facebook: 'Rendy Pambajeng',
+    facebook: 'https://www.facebook.com/share/1CThcKHE5Z/',
     tiktok: '@rendyhonda',
     //twitter: 'hondasurabaya', // Optional
     //youtube: 'hondasurabaya', // Optional

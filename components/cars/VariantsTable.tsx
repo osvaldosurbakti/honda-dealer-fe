@@ -105,7 +105,7 @@ export default function VariantsTable({ variants, carName }: VariantsTableProps)
         {/* Additional Info */}
         <div className="mt-6 text-center text-gray-600 text-sm">
           <p>
-            💡 Harga dapat berubah sewaktu-waktu. Hubungi sales kami untuk informasi harga terbaru dan promo.
+            💡 Harga dapat berubah sewaktu-waktu. Hubungi Rendy untuk informasi harga terbaru dan promo.
           </p>
         </div>
       </div>

@@ -61,7 +61,7 @@ export default function Home() {
             Siap Memiliki Honda Impian Anda?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Hubungi sales consultant kami sekarang untuk informasi lebih lanjut dan penawaran spesial.
+            Hubungi Rendy sekarang untuk informasi lebih lanjut dan penawaran spesial.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
