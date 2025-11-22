@@ -1,6 +1,5 @@
 // Main export file for all types
 export * from './car';
-export * from './promotion';
 
 // Common types
 export interface ApiResponse<T> {

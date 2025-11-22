@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url), // ✅ INI YANG DITAMBAHKIN
   title: {
     default: siteConfig.seo.defaultTitle,
     template: siteConfig.seo.titleTemplate,
@@ -21,10 +22,22 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
+  
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png', sizes: '180x180' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
   themeColor: '#E40521',
+  width: 'device-width',
+  initialScale: 1,
 };
 
 interface RootLayoutProps {
@@ -38,7 +51,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Layout>
           {children}
         </Layout>
-        {/* TimedPopup di luar Layout agar z-index bekerja optimal */}
         <TimedPopup 
           delay={5000}
           brosurImage="/images/brosur/main.jpg"

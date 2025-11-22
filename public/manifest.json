@@ -1,0 +1,16 @@
+{
+  "name": "Rendy Honda Surabaya - Dealer Resmi Honda",
+  "short_name": "Rendy Honda",
+  "description": "Dealer resmi Honda di Surabaya. Penjualan mobil Honda cash & kredit dengan DP ringan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E40521",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

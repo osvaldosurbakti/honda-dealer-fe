@@ -66,7 +66,7 @@ export default function MainCTASection({ car }: MainCTASectionProps) {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
           {/* WhatsApp Button - Primary */}
           <a
-            href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo Rendy, saya tertarik dengan ${car.name} ${car.model} ${car.year}. Bisa info detail harga ${car.priceRange}, spesifikasi, dan penawaran terbaiknya?`)}`}
+            href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo Rendy, saya tertarik dengan ${car.name} ${car.model}. Bisa info detail harga ${car.priceRange}, spesifikasi, dan penawaran terbaiknya?`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-4 border-2 border-green-400 min-w-[280px]"
