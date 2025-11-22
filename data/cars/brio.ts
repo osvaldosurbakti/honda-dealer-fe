@@ -10,24 +10,8 @@ export const brio: Car = {
   startingPrice: 182100000,
   videoUrl: 'https://youtu.be/BZhddbB5pvo?si=GBaeeLA6Kf7l9cJc',
   typeCount: 7,
-  year: 2024,
   images: {
     main: '/images/cars/all-new-brio/main.jpg',
-    gallery: [
-      '/images/cars/all-new-brio/gallery-1.jpg',
-      '/images/cars/all-new-brio/gallery-2.jpg',
-      '/images/cars/all-new-brio/gallery-3.jpg',
-      '/images/cars/all-new-brio/gallery-4.jpg',
-    ],
-    thumbnail: '/images/cars/all-new-brio/thumbnail.jpg',
-    colorOptions: [
-      '/images/cars/all-new-brio/colors/red.jpg',
-      '/images/cars/all-new-brio/colors/blue.jpg',
-      '/images/cars/all-new-brio/colors/white.jpg',
-      '/images/cars/all-new-brio/colors/black.jpg',
-      '/images/cars/all-new-brio/colors/silver.jpg',
-      '/images/cars/all-new-brio/colors/orange.jpg',
-    ],
   },
   variants: [
     {
@@ -246,10 +230,6 @@ export const brio: Car = {
         'Two-Tone Color Options',
         'Chrome Accents',
       ],
-      images: [
-        '/images/cars/all-new-brio/features/exterior-1.jpg',
-        '/images/cars/all-new-brio/features/exterior-2.jpg',
-      ],
     },
     interior: {
       title: 'Interior Praktis & Fungsional',
@@ -261,10 +241,6 @@ export const brio: Car = {
         'Power Windows',
         'Steering Wheel dengan Audio Control (RS)',
         'Cabin Storage yang Luas',
-      ],
-      images: [
-        '/images/cars/all-new-brio/features/interior-1.jpg',
-        '/images/cars/all-new-brio/features/interior-2.jpg',
       ],
     },
     safety: {
@@ -278,10 +254,6 @@ export const brio: Car = {
         'Rear Parking Sensor (RS)',
         'High-Mounted Stop Lamp',
       ],
-      images: [
-        '/images/cars/all-new-brio/features/safety-1.jpg',
-        '/images/cars/all-new-brio/features/safety-2.jpg',
-      ],
     },
     technology: {
       title: 'Teknologi untuk Kenyamanan Berkendara',
@@ -293,10 +265,6 @@ export const brio: Car = {
         'Power Steering',
         'Multi-Info Display',
         'Audio System dengan USB & Bluetooth',
-      ],
-      images: [
-        '/images/cars/all-new-brio/features/tech-1.jpg',
-        '/images/cars/all-new-brio/features/tech-2.jpg',
       ],
     },
   },

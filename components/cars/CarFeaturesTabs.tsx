@@ -275,32 +275,6 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
                 </div>
               </div>
             </div>
-
-            {/* Kapasitas */}
-            <div>
-              <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                Kapasitas
-              </h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  { label: 'Kapasitas Penumpang', value: specs.capacity.seating, icon: '👥' },
-                  { label: 'Tangki Bahan Bakar', value: specs.capacity.fuelTank, icon: '⛽' },
-                  { label: 'Kapasitas Bagasi', value: specs.capacity.luggage, icon: '🎒' },
-                  { label: 'Jumlah Pintu', value: specs.capacity.doors, icon: '🚪' },
-                ].map((item, index) => (
-                  <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-md transition-shadow duration-300">
-                    <div className="text-2xl mb-3">{item.icon}</div>
-                    <div className="text-gray-600 text-sm mb-2">{item.label}</div>
-                    <div className="font-bold text-lg text-gray-900">{item.value}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         );
 

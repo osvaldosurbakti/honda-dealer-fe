@@ -8,20 +8,9 @@ export const stepwgn: Car =   {
     priceRange: 'Rp 650 - 750 Juta',
     startingPrice: 650000000,
     typeCount: 3,
-    year: 2024,
+    videoUrl: 'https://youtu.be/lk3qq1VDRms?si=akzFR2ZBm5F6Jr0I',
     images: {
       main: '/images/cars/stepwgn-e-hev/main.jpg',
-      gallery: [
-        '/images/cars/stepwgn-e-hev/gallery-1.jpg',
-        '/images/cars/stepwgn-e-hev/gallery-2.jpg',
-        '/images/cars/stepwgn-e-hev/gallery-3.jpg',
-      ],
-      thumbnail: '/images/cars/stepwgn-e-hev/thumbnail.jpg',
-      colorOptions: [
-        '/images/cars/stepwgn-e-hev/colors/white.jpg',
-        '/images/cars/stepwgn-e-hev/colors/black.jpg',
-        '/images/cars/stepwgn-e-hev/colors/silver.jpg',
-      ],
     },
     variants: [
       {

@@ -6,7 +6,7 @@ export interface CarVariant {
   priceFormatted: string;
   features: string[];
   image?: string;
-  transmission: 'Manual' | 'CVT' | 'Automatic';
+  transmission: 'Manual' | 'CVT' | 'Automatic' | 'e-CVT';
   fuelType: 'Bensin' | 'Diesel' | 'Hybrid' | 'Electric';
   engineCapacity: string;
   available: boolean;
@@ -51,25 +51,21 @@ export interface CarFeatureSections {
     title: string;
     description: string;
     features: string[];
-    images: string[];
   };
   interior?: {
     title: string;
     description: string;
     features: string[];
-    images: string[];
   };
   safety?: {
     title: string;
     description: string;
     features: string[];
-    images: string[];
   };
   technology?: {
     title: string;
     description: string;
     features: string[];
-    images: string[];
   };
 }
 
@@ -79,19 +75,15 @@ export interface Car {
   slug: string;
   name: string;
   model: string;
-  category: 'Hatchback' | 'SUV' | 'Sedan' | 'MPV' | 'Sport';
+  category: 'Hatchback' | 'SUV' | 'Sedan' | 'MPV' | 'Sport' | 'Hot Hatch';
   priceRange: string;
   videoUrl?: string; // Tambahkan ini
   videoThumbnail?: string; // Opsional
   startingPrice: number;
   typeCount: number;
-  year: number;
   images: {
     main: string;
-    gallery: string[];
-    thumbnail: string;
-    colorOptions: string[];
-  };
+    };
   variants: CarVariant[];
   specs?: CarSpecs; // Made optional since some new cars don't have full specs
   features?: CarFeatureSections; // Made optional since some new cars don't have full features
