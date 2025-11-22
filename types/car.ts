@@ -81,6 +81,8 @@ export interface Car {
   model: string;
   category: 'Hatchback' | 'SUV' | 'Sedan' | 'MPV' | 'Sport';
   priceRange: string;
+  videoUrl?: string; // Tambahkan ini
+  videoThumbnail?: string; // Opsional
   startingPrice: number;
   typeCount: number;
   year: number;

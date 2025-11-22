@@ -8,6 +8,7 @@ export const brio: Car = {
   category: 'Hatchback',
   priceRange: 'Rp 182,1 - 271,3 Juta',
   startingPrice: 182100000,
+  videoUrl: 'https://youtu.be/BZhddbB5pvo?si=GBaeeLA6Kf7l9cJc',
   typeCount: 7,
   year: 2024,
   images: {
