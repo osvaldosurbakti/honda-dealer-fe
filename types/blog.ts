@@ -10,7 +10,7 @@ export interface BlogPost {
     avatar: string;
     role: string;
   };
-  category: 'tips' | 'news' | 'promo' | 'review' | 'maintenance';
+  category: 'tips' | 'news' | 'promo' | 'review' | 'maintenance' | 'comparison';
   tags: string[];
   publishedAt: string;
   updatedAt?: string;

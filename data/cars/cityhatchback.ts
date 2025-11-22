@@ -9,7 +9,7 @@ export const cityhatchback: Car = {
   priceRange: 'Rp 388,2 - 390,7 Juta',
   startingPrice: 388200000,
   typeCount: 2,
-  videoUrl: 'https://www.youtube.com/watch?v=ZER-nEN3mno',
+  videoUrl: 'https://youtu.be/8rGOvQyZgNo?si=EqGc3A4p7_Mo7bDJ',
   images: {
     main: '/images/cars/city-hatchback-rs/main.jpg',
   },
