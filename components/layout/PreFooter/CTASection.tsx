@@ -48,7 +48,7 @@ export default function CTASection() {
         
         {/* Test Drive - Secondary */}
         <a
-          href="/test-drive"
+          href={`https://wa.me/${contactInfo.whatsapp.number}?text=${encodeURIComponent(contactInfo.whatsapp.message)}`}
           className="block bg-gradient-to-r from-honda-red to-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 group"
         >
           <Car className="w-5 h-5" />

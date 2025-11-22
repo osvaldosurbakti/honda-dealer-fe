@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import Layout from '@/components/layout/Layout';
+import TimedPopup from '@/components/TimedPopup';
 import { siteConfig } from '@/lib/config/site';
 import './globals.css';
 
@@ -20,10 +21,8 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
-  // HAPUS themeColor dari sini
 };
 
-// TAMBAHKAN viewport export
 export const viewport: Viewport = {
   themeColor: '#E40521',
 };
@@ -39,6 +38,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Layout>
           {children}
         </Layout>
+        {/* TimedPopup di luar Layout agar z-index bekerja optimal */}
+        <TimedPopup 
+          delay={5000}
+          brosurImage="/images/brosur/main.jpg"
+          brosurAlt="Promo Spesial Honda Surabaya - DP 10%, Free Aksesoris, dan Hadiah Menarik"
+        />
       </body>
     </html>
   );
