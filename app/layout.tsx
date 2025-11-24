@@ -6,14 +6,14 @@ import TimedPopup from '@/components/TimedPopup';
 import { siteConfig } from '@/lib/config/site';
 import './globals.css';
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url), // ✅ INI YANG DITAMBAHKIN
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.seo.defaultTitle,
     template: siteConfig.seo.titleTemplate,
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
-  
+
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -51,10 +51,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Layout>
           {children}
         </Layout>
-        <TimedPopup 
+        <TimedPopup
           delay={5000}
-          brosurImage="/images/brosur/main.jpg"
-          brosurAlt="Promo Spesial Honda Surabaya - DP 10%, Free Aksesoris, dan Hadiah Menarik"
         />
       </body>
     </html>

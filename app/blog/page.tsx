@@ -11,44 +11,12 @@ export const metadata: Metadata = {
   keywords: 'blog honda, tips mobil, berita honda, review mobil, perawatan mobil',
 };
 
-interface BlogPageProps {
-  searchParams: Promise<{
-    category?: string;
-    tag?: string;
-    search?: string;
-  }>;
-}
+// HAPUS interface BlogPageProps dan searchParams
 
-export default async function BlogPage({ searchParams }: BlogPageProps) {
-  // Unwrap searchParams Promise
-  const params = await searchParams;
-  const { category, tag, search } = params;
+export default function BlogPage() { 
 
-  // Filter posts based on search params
-  let filteredPosts = blogPosts;
-
-  if (category) {
-    filteredPosts = filteredPosts.filter(post => 
-      post.category === category
-    );
-  }
-
-  if (tag) {
-    filteredPosts = filteredPosts.filter(post =>
-      post.tags.includes(tag)
-    );
-  }
-
-  if (search) {
-    const searchLower = search.toLowerCase();
-    filteredPosts = filteredPosts.filter(post =>
-      post.title.toLowerCase().includes(searchLower) ||
-      post.excerpt.toLowerCase().includes(searchLower) ||
-      post.content.toLowerCase().includes(searchLower) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchLower))
-    );
-  }
-
+  // Gunakan semua posts tanpa filter
+  const displayedPosts = blogPosts;
   const featuredPosts = getFeaturedPosts();
   const recentPosts = getRecentPosts();
 
@@ -67,7 +35,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       </section>
 
       {/* Featured Posts */}
-      {featuredPosts.length > 0 && !category && !tag && !search && (
+      {featuredPosts.length > 0 && ( // HAPUS: !category && !tag && !search
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
@@ -88,19 +56,16 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                    {category ? `Kategori: ${blogCategories.find(c => c.slug === category)?.name}` :
-                     tag ? `Tag: #${tag}` :
-                     search ? `Hasil pencarian: "${search}"` :
-                     'Artikel Terbaru'}
+                    Semua Artikel {/* HAPUS conditional title */}
                   </h2>
-                  {filteredPosts.length > 0 && (
+                  {displayedPosts.length > 0 && (
                     <p className="text-gray-600 mt-2">
-                      {filteredPosts.length} artikel ditemukan
+                      {displayedPosts.length} artikel tersedia {/* HAPUS: ditemukan */}
                     </p>
                   )}
                 </div>
                 
-                {/* Sort Options */}
+                {/* Sort Options - BISA DIBIARKAN atau DIHAPUS */}
                 <div className="flex gap-2">
                   <select className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
                     <option value="newest">Terbaru</option>
@@ -110,30 +75,21 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 </div>
               </div>
 
-              {/* Categories Filter */}
-              <BlogCategories activeCategory={category} />
+              {/* Categories Filter - TANPA activeCategory */}
+              <BlogCategories />
 
               {/* Posts Grid */}
-              {filteredPosts.length > 0 ? (
-                <BlogGrid posts={filteredPosts} columns={2} />
+              {displayedPosts.length > 0 ? (
+                <BlogGrid posts={displayedPosts} columns={2} />
               ) : (
                 <div className="text-center py-12">
                   <div className="text-gray-400 text-6xl mb-4">📝</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Tidak ada artikel ditemukan
+                    Tidak ada artikel
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    {search 
-                      ? `Tidak ada hasil untuk "${search}". Coba dengan kata kunci lain.`
-                      : 'Silakan coba kategori atau tag yang berbeda.'
-                    }
+                    Belum ada artikel yang tersedia.
                   </p>
-                  <a
-                    href="/blog"
-                    className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    Lihat Semua Artikel
-                  </a>
                 </div>
               )}
             </div>

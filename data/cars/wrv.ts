@@ -205,7 +205,7 @@ export const wrv: Car = {
     },
     features: {
       exterior: ['LED Headlights', '17-inch Alloy Wheels (RS)', 'RS Body Kit', 'Two-Tone Color'],
-      interior: ['7-inch Touchscreen Audio', 'Multi-Info Display', 'Fabric Seats', 'RS Seat Fabric', 'Auto AC'],
+      interior: ['7-inch Touchscreen Audio', 'Multi-Info Display', 'Fabric Seats', 'RS Seat Fabric', 'Auto AC', 'Remote Engine Start'],
       safety: ['4 SRS Airbags', 'ABS dengan EBD', 'Honda SENSING (RS High)', 'Rear Camera', 'Rear Parking Sensor'],
       entertainment: ['Smartphone Connection', '4 Speakers', 'Steering Audio Control (RS)'],
     },
@@ -235,6 +235,7 @@ export const wrv: Car = {
         'Steering Wheel dengan Audio Control (RS)',
         'Auto AC (RS)',
         'Push Start Button (RS)',
+        'Remote Engine Start',
       ],
     },
     safety: {

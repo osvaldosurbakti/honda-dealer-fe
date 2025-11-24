@@ -21,7 +21,7 @@ export const brv: Car = {
       priceFormatted: 'Rp 313.400.000',
       features: [
         'Halogen Headlights',
-        '15-inch Steel Wheels',
+        '16-inch Steel Wheels',
         '7-inch Touchscreen Display Audio',
         'USB Charging Ports',
         '2 SRS Airbags',
@@ -117,7 +117,7 @@ export const brv: Car = {
       features: [
         'Sporty MPV Design',
         'LED Headlights dengan DRL (Varian E)',
-        '16-inch Alloy Wheels (E) / 15-inch Steel Wheels (S)',
+        '16-inch Alloy Wheels (E)',
         'Roof Rail',
         'Front Fog Lamps',
         'Chrome Door Handle & Side Molding (E)',

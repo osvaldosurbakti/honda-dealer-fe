@@ -92,7 +92,7 @@ export const brio: Car = {
       features: [
         'RS Body Kit & Grille',
         'Front Fog Lamps',
-        '14-inch Alloy Wheels',
+        '15-inch Alloy Wheels',
         'Touchscreen Audio dengan USB & Bluetooth',
         'Rear Parking Sensor',
         'Power Window Depan & Belakang',
@@ -116,7 +116,7 @@ export const brio: Car = {
         'RS Body Kit & Grille',
         'Two-Tone Color',
         'Front Fog Lamps',
-        '14-inch Alloy Wheels',
+        '15-inch Alloy Wheels',
         'Touchscreen Audio dengan USB & Bluetooth',
         'Rear Parking Sensor',
         'Power Window Depan & Belakang',
@@ -140,7 +140,7 @@ export const brio: Car = {
       features: [
         'RS Body Kit & Grille',
         'Front Fog Lamps',
-        '14-inch Alloy Wheels',
+        '15-inch Alloy Wheels',
         'Touchscreen Audio dengan USB & Bluetooth',
         'Rear Parking Sensor',
         'Power Window Depan & Belakang',
@@ -167,7 +167,7 @@ export const brio: Car = {
         'RS Body Kit & Grille',
         'Two-Tone Color',
         'Front Fog Lamps',
-        '14-inch Alloy Wheels',
+        '15-inch Alloy Wheels',
         'Touchscreen Audio dengan USB & Bluetooth',
         'Rear Parking Sensor',
         'Power Window Depan & Belakang',
@@ -212,7 +212,7 @@ export const brio: Car = {
       doors: '5 Pintu',
     },
     features: {
-      exterior: ['LED Headlights (RS)', 'Front Fog Lamps (RS)', '14-inch Alloy Wheels (RS)', 'RS Body Kit'],
+      exterior: ['LED Headlights (RS)', 'Front Fog Lamps (RS)', '15-inch Alloy Wheels (RS)', 'RS Body Kit'],
       interior: ['Touchscreen Audio', 'Multi-Info Display', 'Fabric Seats', 'RS Seat Fabric'],
       safety: ['Dual SRS Airbags', 'ABS dengan EBD', 'Immobilizer', 'Rear Parking Sensor (RS)'],
       entertainment: ['USB & Bluetooth Audio', '4 Speakers', 'Steering Audio Control (RS)'],
@@ -225,7 +225,7 @@ export const brio: Car = {
       features: [
         'Compact Hatchback Design',
         'RS Body Kit (Varian RS)',
-        '14-inch Alloy Wheels (RS)',
+        '15-inch Alloy Wheels (RS)',
         'Front Fog Lamps (RS)',
         'Two-Tone Color Options',
         'Chrome Accents',

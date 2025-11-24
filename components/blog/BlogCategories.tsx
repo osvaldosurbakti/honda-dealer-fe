@@ -1,36 +1,18 @@
-import { BlogCategory } from '@/types/blog';
-import Link from 'next/link';
+// components/blog/BlogCategories.tsx
 import { blogCategories } from '@/data/blog/categories';
 
-interface BlogCategoriesProps {
-  activeCategory?: string;
-}
-
-export default function BlogCategories({ activeCategory }: BlogCategoriesProps) {
+export default function BlogCategories() { // HAPUS activeCategory prop
   return (
     <div className="flex flex-wrap gap-2 mb-8">
-      <Link
-        href="/blog"
-        className={`px-4 py-2 rounded-full font-medium transition-colors ${
-          !activeCategory 
-            ? 'bg-red-600 text-white' 
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        Semua
-      </Link>
+      {/* Tampilkan categories sebagai static info saja */}
       {blogCategories.map((category) => (
-        <Link
-          key={category.id}
-          href={`/blog?category=${category.slug}`}
-          className={`px-4 py-2 rounded-full font-medium transition-colors ${
-            activeCategory === category.slug
-              ? 'bg-red-600 text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-          }`}
+        <span
+          key={category.slug}
+          className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 border border-gray-300 cursor-not-allowed opacity-70"
+          title="Filter by category tidak tersedia di versi static"
         >
-          {category.name} ({category.postCount})
-        </Link>
+          {category.name}
+        </span>
       ))}
     </div>
   );

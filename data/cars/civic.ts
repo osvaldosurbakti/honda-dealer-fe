@@ -56,7 +56,6 @@ export const civic: Car = {
         'Blind Spot Information',
         'Cross Traffic Monitor',
         'Front & Rear Parking Sensors',
-        'Panoramic Sunroof',
         'Ambient Lighting dengan 8 Color Options',
         'Bose Premium Audio System dengan 12 Speakers',
         'Wireless Apple CarPlay & Android Auto',
@@ -100,7 +99,7 @@ export const civic: Car = {
       doors: '4 Pintu',
     },
     features: {
-      exterior: ['RS Body Kit', 'LED Adaptive Headlights', '18-inch RS Alloy Wheels', 'Panoramic Sunroof', 'RS Rear Spoiler', 'Chrome Accents'],
+      exterior: ['RS Body Kit', 'LED Adaptive Headlights', '18-inch RS Alloy Wheels', 'RS Rear Spoiler', 'Chrome Accents'],
       interior: ['12.3-inch Digital Meter Cluster', '9-inch Touchscreen', 'Leather RS Seats', 'Bose Premium Audio', 'Head-Up Display', 'Ambient Lighting'],
       safety: ['Honda SENSING 360', '6 SRS Airbags', '360° Camera System', 'Blind Spot Information', 'Cross Traffic Monitor'],
       entertainment: ['Bose 12-Speaker System', 'Wireless Apple CarPlay & Android Auto', 'Wireless Charger', 'Digital Key'],
@@ -116,7 +115,6 @@ export const civic: Car = {
         '18-inch Alloy Wheels RS Design',
         'RS Front Grille dengan Red Accent',
         'RS Rear Spoiler',
-        'Panoramic Sunroof',
         'Chrome Window Surround',
         'Dual Exhaust Tip',
         'RS Badging',
@@ -134,7 +132,6 @@ export const civic: Car = {
         'Heated & Ventilated Front Seats',
         'Power Adjustable Seats dengan Memory Function',
         'Ambient Lighting 8 Color',
-        'Panoramic Sunroof',
       ],
     },
     safety: {

@@ -12,6 +12,12 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
+export async function generateStaticParams() {
+  return cars.map((car) => ({
+    slug: car.slug,
+  }));
+}
+
 export default async function CarDetailPage({ params }: Props) {
   const { slug } = await params;
   const car = getCarBySlug(slug);

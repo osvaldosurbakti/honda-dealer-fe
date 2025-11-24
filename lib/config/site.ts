@@ -218,10 +218,10 @@ export const siteConfig: SiteConfig = {
     'honda surabaya terpercaya', 'rendy honda surabaya', 'honda surabaya pusat'
   ],
   author: 'Rendy Pambajeng - Sales Executive Honda Surabaya',
-  url: 'https://hondaprismasurabaya.com',
-  baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://hondaprismasurabaya.com',
-  logo: '/images/logo/honda-dealer-logo.png',
-    logoWhite: '/images/logos/honda-logo-white.svg', // optional
+  url: 'https://mobilhondasurabaya.com',
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://mobilhondasurabaya.com',
+  logo: '/images/logos/honda-logo.png',
+    logoWhite: '/images/logos/honda-logo.svg', // optional
   favicon: '/favicon.ico',
 
   // Company Information

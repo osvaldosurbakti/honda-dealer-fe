@@ -3,6 +3,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -25,17 +26,78 @@ const testimonials = [
     image: '/images/testimonial/testimonial-4.jpg',
     alt: 'Testimoni Pelanggan 4'
   },
+  {
+    id: 5,
+    image: '/images/testimonial/testimonial-5.jpg',
+    alt: 'Testimoni Pelanggan 5'
+  },
+  {
+    id: 6,
+    image: '/images/testimonial/testimonial-6.jpg',
+    alt: 'Testimoni Pelanggan 6'
+  },
+  {    
+    id: 7,
+    image: '/images/testimonial/testimonial-7.jpg',
+    alt: 'Testimoni Pelanggan 7'
+  },
+  {    
+    id: 8,
+    image: '/images/testimonial/testimonial-8.jpg',
+    alt: 'Testimoni Pelanggan 8'
+  },
+  {    
+    id: 9,
+    image: '/images/testimonial/testimonial-9.jpg',
+    alt: 'Testimoni Pelanggan 9'
+  },
 ];
+
+// Default aspect ratio (akan diupdate setelah images load)
+const defaultAspectRatio = 3/4; // 4:3 aspect ratio
 
 export default function TestimonialCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [aspectRatios, setAspectRatios] = useState<number[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   // Minimum swipe distance (px)
   const minSwipeDistance = 50;
+
+  // Preload images dengan approach yang aman
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        const ratios = await Promise.all(
+          testimonials.map((testimonial) => 
+            new Promise<number>((resolve) => {
+              // Gunakan HTMLImageElement constructor dengan jelas
+              const img = new window.Image(); // ✅ FIX: tambahkan window.
+              img.onload = () => {
+                const aspectRatio = img.height / img.width;
+                resolve(aspectRatio);
+              };
+              img.onerror = () => resolve(defaultAspectRatio); // Fallback
+              img.src = testimonial.image;
+            })
+          )
+        );
+        setAspectRatios(ratios);
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error loading images:', error);
+        // Fallback ke default aspect ratios
+        setAspectRatios(testimonials.map(() => defaultAspectRatio));
+        setIsLoading(false);
+      }
+    };
+
+    loadImages();
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % testimonials.length);
@@ -103,14 +165,38 @@ export default function TestimonialCarousel() {
 
   // Auto-rotate slides
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || isLoading) return;
 
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentSlide, isPaused]);
+  }, [currentSlide, isPaused, isLoading]);
+
+  // Calculate height based on aspect ratio
+  const getSlideHeight = () => {
+    if (isLoading || !aspectRatios.length) return 200;
+    
+    const baseWidth = 300; // Base width for calculation
+    const currentAspectRatio = aspectRatios[currentSlide] || defaultAspectRatio;
+    return baseWidth * currentAspectRatio;
+  };
+
+  if (isLoading) {
+    return (
+      <div className="relative">
+        <div className="overflow-hidden rounded-xl bg-gray-200 border border-gray-300">
+          <div 
+            className="w-full flex items-center justify-center transition-all duration-300"
+            style={{ height: '200px' }}
+          >
+            <div className="text-gray-500">Memuat testimoni...</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div 
@@ -118,10 +204,11 @@ export default function TestimonialCarousel() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Carousel Container - With touch events */}
+      {/* Carousel Container - Dynamic height */}
       <div 
         ref={carouselRef}
-        className="overflow-hidden rounded-xl bg-gray-100 border border-gray-200 cursor-grab active:cursor-grabbing"
+        className="overflow-hidden rounded-xl bg-gray-100 border border-gray-200 cursor-grab active:cursor-grabbing transition-all duration-300"
+        style={{ height: `${getSlideHeight()}px` }}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -131,21 +218,25 @@ export default function TestimonialCarousel() {
         onMouseLeave={onMouseUp}
       >
         <div 
-          className="flex transition-transform duration-500 ease-out"
+          className="flex transition-transform duration-500 ease-out h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="w-full shrink-0 select-none"
+              className="w-full shrink-0 select-none flex items-center justify-center p-4"
+              style={{ height: `${getSlideHeight()}px` }}
             >
-              {/* Image Container - Larger and centered */}
-              <div className="w-full h-48 rounded-xl overflow-hidden">
-                <img
+              {/* Image Container - Maintain aspect ratio */}
+              <div className="relative w-full h-full max-w-sm mx-auto">
+                <Image
                   src={testimonial.image}
                   alt={testimonial.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  draggable="false"
+                  fill
+                  className="object-contain rounded-lg"
+                  draggable={false}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={index === 0} // Prioritize first image
                 />
               </div>
             </div>
@@ -153,10 +244,10 @@ export default function TestimonialCarousel() {
         </div>
       </div>
 
-      {/* Navigation Arrows - Hidden on mobile, show on desktop hover */}
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 opacity-0 lg:group-hover:opacity-100 lg:opacity-70"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 opacity-0 lg:group-hover:opacity-100 lg:opacity-70 z-10"
         aria-label="Previous testimonial"
       >
         <ChevronLeft className="w-3 h-3" />
@@ -164,7 +255,7 @@ export default function TestimonialCarousel() {
       
       <button
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 opacity-0 lg:group-hover:opacity-100 lg:opacity-70"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110 opacity-0 lg:group-hover:opacity-100 lg:opacity-70 z-10"
         aria-label="Next testimonial"
       >
         <ChevronRight className="w-3 h-3" />

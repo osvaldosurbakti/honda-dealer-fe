@@ -178,7 +178,7 @@ export const hrv: Car = {
       doors: '5 Pintu',
     },
     features: {
-      exterior: ['LED Headlights dengan DRL', '17-inch Alloy Wheels', 'Two-Tone Color Options', 'Power Slide Moonroof'],
+      exterior: ['LED Headlights dengan DRL', '17-inch Alloy Wheels', 'Two-Tone Color Options'],
       interior: ['7-inch Touchscreen Display Audio', 'Apple CarPlay & Android Auto', 'Fabric Seats', 'Auto AC', 'Electrostatic Touch AC Panel (E+)'],
       safety: ['6 SRS Airbags (E+)', 'Honda SENSING (E+)', 'Multi-Angle Rearview Camera', 'Vehicle Stability Assist', 'Hill Start Assist'],
       entertainment: ['Apple CarPlay & Android Auto', '4 Speakers', 'USB Charging Ports'],
@@ -193,7 +193,6 @@ export const hrv: Car = {
         'LED Headlights dengan Daytime Running Lights',
         '17-inch Alloy Wheels',
         'Two-Tone Color Options',
-        'Power Slide Moonroof',
         'Chrome Accents',
         'Hidden Rear Door Handles',
       ],
