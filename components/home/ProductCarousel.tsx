@@ -149,7 +149,7 @@ export default function ProductCarousel({
 
   if (!cars.length) {
     return (
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-red-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-3">{title}</h2>
           <p className="text-gray-500">Tidak ada mobil tersedia.</p>
@@ -274,7 +274,7 @@ export default function ProductCarousel({
                     className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
                       index === currentSlide 
                         ? 'bg-red-600 scale-110' 
-                        : 'bg-gray-300 hover:bg-gray-400'
+                        : 'bg-gray-300 hover:bg-red-400'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                     disabled={isTransitioning}

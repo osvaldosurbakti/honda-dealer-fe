@@ -180,7 +180,7 @@ useEffect(() => {
               Lihat Nanti
             </button>
             <a 
-              href="/promo"
+              href="/kontak"
               className="flex-1 bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors text-center font-semibold flex items-center justify-center"
               onClick={handleClose}
             >
