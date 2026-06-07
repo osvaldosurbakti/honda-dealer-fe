@@ -105,14 +105,14 @@ export default function KontakPage() {
                   rel="noopener noreferrer"
                   className="flex items-center p-4 sm:p-5 bg-linear-to-r from-green-50 to-green-100 rounded-xl sm:rounded-2xl hover:from-green-100 hover:to-green-200 transition-all duration-300 border border-green-200 shadow-sm hover:shadow-md"
                 >
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-green-500 to-green-600 rounded-xl sm:rounded-2xl flex items-center justify-center mr-4 sm:mr-5 shadow-lg flex-shrink-0">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-green-500 to-green-600 rounded-xl sm:rounded-2xl flex items-center justify-center mr-4 sm:mr-5 shadow-lg shrink-0">
                     <MessageCircle className="text-white w-5 h-5 sm:w-7 sm:h-7" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-bold text-gray-900 text-base sm:text-lg truncate">WhatsApp</h4>
                     <p className="text-green-700 font-medium text-sm sm:text-base truncate">{primaryContact}</p>
                   </div>
-                  <div className="bg-green-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-bold shadow-sm flex-shrink-0 ml-2">
+                  <div className="bg-green-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-bold shadow-sm shrink-0 ml-2">
                     Online
                   </div>
                 </a>
@@ -122,14 +122,14 @@ export default function KontakPage() {
                   href={`tel:${primaryContact}`}
                   className="flex items-center p-4 sm:p-5 bg-linear-to-r from-blue-50 to-blue-100 rounded-xl sm:rounded-2xl hover:from-blue-100 hover:to-blue-200 transition-all duration-300 border border-blue-200 shadow-sm hover:shadow-md"
                 >
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mr-4 sm:mr-5 shadow-lg flex-shrink-0">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mr-4 sm:mr-5 shadow-lg shrink-0">
                     <Phone className="text-white w-5 h-5 sm:w-7 sm:h-7" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-bold text-gray-900 text-base sm:text-lg truncate">Telepon</h4>
                     <p className="text-blue-700 font-medium text-sm sm:text-base truncate">{primaryContact}</p>
                   </div>
-                  <div className="bg-blue-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-bold shadow-sm flex-shrink-0 ml-2">
+                  <div className="bg-blue-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-bold shadow-sm shrink-0 ml-2">
                     Langsung
                   </div>
                 </a>
@@ -139,14 +139,14 @@ export default function KontakPage() {
                   href={`mailto:${contactInfo.emails.primary}`}
                   className="flex items-center p-4 sm:p-5 bg-linear-to-r from-red-50 to-red-100 rounded-xl sm:rounded-2xl hover:from-red-100 hover:to-red-200 transition-all duration-300 border border-red-200 shadow-sm hover:shadow-md"
                 >
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-red-500 to-red-600 rounded-xl sm:rounded-2xl flex items-center justify-center mr-4 sm:mr-5 shadow-lg flex-shrink-0">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-red-500 to-red-600 rounded-xl sm:rounded-2xl flex items-center justify-center mr-4 sm:mr-5 shadow-lg shrink-0">
                     <Mail className="text-white w-5 h-5 sm:w-7 sm:h-7" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-bold text-gray-900 text-base sm:text-lg truncate">Email</h4>
                     <p className="text-red-700 font-medium text-sm sm:text-base truncate">{contactInfo.emails.primary}</p>
                   </div>
-                  <div className="bg-red-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-bold shadow-sm flex-shrink-0 ml-2">
+                  <div className="bg-red-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-bold shadow-sm shrink-0 ml-2">
                     24 Jam
                   </div>
                 </a>
