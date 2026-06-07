@@ -75,11 +75,22 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center text-xs">
               
               {/* Copyright */}
-              <div className="flex items-center space-x-2 lg:space-x-4 mb-1 lg:mb-0">
-                <p className="text-gray-600 text-[10px] lg:text-xs">
-                  © {currentYear} {siteConfig.company.name}. All rights reserved.
-                </p>
-              </div>
+{/* Copyright */}
+<div className="flex items-center space-x-3 lg:space-x-6 mb-1 lg:mb-0">
+  <p className="text-gray-600 text-[10px] lg:text-xs">
+    © {currentYear} {siteConfig.company.name}. All rights reserved.
+  </p>
+
+  <span className="text-gray-400 text-[10px] lg:text-xs">•</span>
+
+  <Link
+    href="/privacy-policy"
+    className="text-gray-500 hover:text-honda-red text-[10px] lg:text-xs transition-colors"
+  >
+    Privacy Policy
+  </Link>
+</div>
+
 
               {/* Contact Info & Social */}
               <div className="flex items-center space-x-2 lg:space-x-4">

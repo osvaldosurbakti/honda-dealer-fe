@@ -120,7 +120,7 @@ export default function MobilPage() {
                 {/* Quick Actions */}
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://wa.me/6287852432636"
+                    href="https://wa.me/6285859369826"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl"
@@ -129,7 +129,7 @@ export default function MobilPage() {
                     <span>Konsultasi Gratis</span>
                   </a>
                   <a
-                    href="tel:087852432636"
+                    href="tel:085859369826"
                     className="bg-honda-red text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl"
                   >
                     <Phone className="w-5 h-5" />
@@ -203,7 +203,7 @@ export default function MobilPage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://wa.me/6287852432636?text=Halo,%20saya%20ingin%20konsultasi%20promo%20mobil%20Honda"
+                  href="https://wa.me/6285859369826?text=Halo,%20saya%20ingin%20konsultasi%20promo%20mobil%20Honda"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all duration-300 flex items-center justify-center space-x-2 text-lg shadow-lg hover:shadow-xl"
@@ -212,7 +212,7 @@ export default function MobilPage() {
                   <span>Dapatkan Promo</span>
                 </a>
                 <a
-                  href="tel:087852432636"
+                  href="tel:085859369826"
                   className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 text-lg shadow-lg hover:shadow-xl"
                 >
                   <Phone className="w-5 h-5" />

@@ -117,7 +117,7 @@ export default function CompactProductCard({ car, className = '' }: CompactProdu
             </Button>
           </Link>
           <a
-            href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}. Bisa info lebih lanjut?`)}`}
+            href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}. Bisa info lebih lanjut?`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 min-w-0"

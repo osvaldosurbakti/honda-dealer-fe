@@ -125,7 +125,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent transition"
-            placeholder="087852432636"
+            placeholder="085859369826"
           />
         </div>
 
@@ -221,7 +221,7 @@ export default function ContactForm() {
             Mengirim...
           </span>
         ) : (
-          'Kirim Pesan ke Rendy'
+          'Kirim Pesan ke Mary'
         )}
       </button>
 

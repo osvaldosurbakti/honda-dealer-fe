@@ -134,7 +134,7 @@ export default function BlogSidebar({ posts, currentPost }: BlogSidebarProps) {
           Hubungi kami untuk info lebih lanjut tentang mobil Honda
         </p>
         <a
-          href="https://wa.me/6287852432636"
+          href="https://wa.me/6285859369826"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-red-600 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors"

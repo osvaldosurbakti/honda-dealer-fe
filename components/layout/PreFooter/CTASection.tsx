@@ -29,7 +29,7 @@ export default function CTASection() {
       {/* Description */}
       <div className="space-y-3 mb-6">
         <p className="text-gray-600 text-sm leading-relaxed">
-          Hubungi Rendy untuk informasi lengkap, test drive, dan penawaran spesial.
+          Hubungi Mary untuk informasi lengkap, test drive, dan penawaran spesial.
         </p>
       </div>
 
@@ -103,7 +103,7 @@ export default function CTASection() {
                 onClick={() => {
                   if (navigator.share) {
                     navigator.share({
-                      title: 'Rendy Honda Surabaya',
+                      title: 'Mary Honda Surabaya',
                       text: 'Temukan mobil Honda terbaru dengan penawaran spesial',
                       url: window.location.href,
                     });

@@ -61,7 +61,7 @@ export default function VariantsTable({ variants, carName }: VariantsTableProps)
             
             <div>
               <a
-                href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo Rendy, saya tertarik dengan ${carName} tipe ${variants[selectedVariant].type} seharga ${variants[selectedVariant].priceFormatted}. Bisa info detail dan test drive?`)}`}
+                href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo Mary, saya tertarik dengan ${carName} tipe ${variants[selectedVariant].type} seharga ${variants[selectedVariant].priceFormatted}. Bisa info detail dan test drive?`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-3 rounded-lg font-bold text-base hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center justify-center gap-2"
@@ -142,7 +142,7 @@ export default function VariantsTable({ variants, carName }: VariantsTableProps)
                 {/* Action Buttons */}
                 <div className="flex gap-2 mt-4">
                   <a
-                    href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo Rendy, saya tertarik dengan ${carName} tipe ${variant.type} seharga ${variant.priceFormatted}. Bisa info detail lebih lanjut?`)}`}
+                    href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo Mary, saya tertarik dengan ${carName} tipe ${variant.type} seharga ${variant.priceFormatted}. Bisa info detail lebih lanjut?`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-sm hover:shadow-md text-xs"
@@ -150,7 +150,7 @@ export default function VariantsTable({ variants, carName }: VariantsTableProps)
                     Chat WhatsApp
                   </a>
                   <a
-                    href="tel:087852432636"
+                    href="tel:085859369826"
                     className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center text-xs"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

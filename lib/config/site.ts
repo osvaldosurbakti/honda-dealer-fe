@@ -207,17 +207,17 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   // Basic Site Information
-  name: 'Rendy Pambajeng Honda Surabaya',
-  title: 'Dealer Resmi Honda Surabaya - Honda Prisma HR Muhammad',
-  description: 'Dealer resmi Honda di Surabaya Timur. Penjualan mobil Honda baru & bekas: HR-V, CR-V, Brio, Civic, City, Mobilio. Kredit DP 10%, test drive gratis, promo spesial setiap bulan. Service & spare part original.',
+  name: 'Mary Christie Honda Surabaya',
+  title: 'Dealer Resmi Honda Surabaya - Honda IMSI Surabaya',
+  description: 'Dealer resmi Honda di Surabaya. Penjualan mobil Honda baru & bekas: HR-V, CR-V, Brio, Civic, City, Mobilio. Kredit DP 10%, test drive gratis, promo spesial setiap bulan. Service & spare part original.',
   keywords: [
     'honda surabaya', 'dealer honda surabaya', 'mobil honda surabaya', 'hr-v surabaya', 'cr-v surabaya',
     'brio surabaya', 'civic surabaya', 'kredit mobil honda', 'test drive honda', 'honda surabaya timur',
     'dealer honda hr muhammad', 'honda prisma surabaya', 'jual mobil honda surabaya', 'showroom honda surabaya',
     'service honda surabaya', 'spare part honda', 'promo honda surabaya', 'honda surabaya murah',
-    'honda surabaya terpercaya', 'rendy honda surabaya', 'honda surabaya pusat'
+    'honda surabaya terpercaya', 'mary christie honda surabaya', 'honda surabaya pusat'
   ],
-  author: 'Rendy Pambajeng - Sales Executive Honda Surabaya',
+  author: 'Mary Christie - Sales Executive Honda Surabaya',
   url: 'https://mobilhondasurabaya.com',
   baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://mobilhondasurabaya.com',
   logo: '/images/logos/honda-logo.png',
@@ -226,7 +226,7 @@ export const siteConfig: SiteConfig = {
 
   // Company Information
   company: {
-    name: 'Rendy Honda Surabaya',
+    name: 'Mary Christie Honda Surabaya',
     legalName: 'PT. Honda Prisma - Authorized Honda Dealer Surabaya',
     description: 'Dealer resmi Honda terpercaya di Surabaya Timur dengan pengalaman lebih dari 10 tahun melayani masyarakat Jawa Timur. Menyediakan mobil Honda baru & bekas berkualitas dengan pelayanan terbaik, promo menarik, dan after-sales service profesional.',
     foundingYear: 2010,
@@ -271,20 +271,20 @@ export const siteConfig: SiteConfig = {
 
   // SEO Configuration
   seo: {
-    titleTemplate: '%s | Rendy Pambajeng - Dealer Resmi Honda Surabaya',
+    titleTemplate: '%s | Mary Christie - Dealer Resmi Honda Surabaya',
     defaultTitle: 'Dealer Resmi Honda Surabaya - Honda Prisma HR Muhammad | Penjualan & Service',
     titleSeparator: '|',
     defaultDescription: 'Dealer resmi Honda di Surabaya Timur. Mobil baru Honda HR-V, CR-V, Brio, Civic, City. Kredit DP 10%, test drive gratis, promo spesial. Service & spare part original.',
     siteLanguage: 'id',
     locale: 'id_ID',
-    twitterHandle: '@rendyhondasby',
+    twitterHandle: '@marychristiehonda',
     openGraph: {
       type: 'website',
-      siteName: 'Rendy Pambajeng Honda Surabaya',
+      siteName: 'Mary Christie Honda Surabaya',
       profile: {
-        firstName: 'Rendy',
-        lastName: 'Pambajeng',
-        username: 'rendyhondasurabaya'
+        firstName: 'Mary',
+        lastName: 'Christie',
+        username: 'marychristiehonda'
       }
     },
     robots: {
@@ -329,10 +329,10 @@ export const siteConfig: SiteConfig = {
   // Social Media Links
   social: {
     facebook: 'https://www.facebook.com/share/1CThcKHE5Z/',
-    instagram: 'https://instagram.com/rendyhondasurabaya',
-    tiktok: 'https://tiktok.com/@rendyhondasurabaya',
-    youtube: 'https://youtube.com/@rendyhondasurabaya',
-    linkedin: 'https://linkedin.com/company/rendy-honda-surabaya'
+    instagram: 'https://instagram.com/marychristiehonda',
+    tiktok: 'https://tiktok.com/@marychristiehonda',
+    youtube: 'https://youtube.com/@marychristiehonda',
+    linkedin: 'https://linkedin.com/company/mary-christie-honda-surabaya'
   },
 
   // Contact Configuration
@@ -343,7 +343,7 @@ export const siteConfig: SiteConfig = {
       timeout: 10000
     },
     whatsapp: {
-      defaultMessage: 'Halo Rendy Honda Surabaya, saya tertarik dengan mobil Honda. Bisa info harga, promo, dan test drive?',
+      defaultMessage: 'Halo Mary Christie Honda Surabaya, saya tertarik dengan mobil Honda. Bisa info harga, promo, dan test drive?',
       autoOpen: true,
       businessHours: true
     },
@@ -409,7 +409,7 @@ export const siteConfig: SiteConfig = {
       categories: ['Tips & Perawatan', 'Review Mobil', 'Promo & Event', 'Berita Honda', 'After Sales'],
       tags: ['honda hrv', 'honda crv', 'honda brio', 'honda civic', 'perawatan mobil', 'tips kredit', 'test drive', 'promo surabaya'],
       postingFrequency: '3 posts per week',
-      featuredAuthors: ['Rendy Sales', 'Sari Test Drive', 'Ahmad Comparo', 'Budi EcoDrive']
+      featuredAuthors: ['Mary Christie Sales', 'Sari Test Drive', 'Ahmad Comparo', 'Budi EcoDrive']
     },
     cars: {
       brands: ['Honda'],

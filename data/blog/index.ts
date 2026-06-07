@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&h=400&fit=crop',
     author: {
-      name: 'Rendy Sales',
+      name: 'Mary Sales',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
       role: 'Sales Executive'
     },
@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2024-01-15',
     readTime: 5,
     isFeatured: true,
-    metaTitle: 'Tips Merawat Mobil Honda - Rendy Honda Surabaya',
+    metaTitle: 'Tips Merawat Mobil Honda - Mary Honda Surabaya',
     metaDescription: '7 tips praktis merawat mobil Honda agar tetap awet dan bertenaga. Dari service berkala hingga perawatan harian dari ahli Honda.'
   },
   {
@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
     content: '...',
     featuredImage: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=400&fit=crop',
     author: {
-      name: 'Rendy Sales',
+      name: 'Mary Sales',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
       role: 'Sales Executive'
     },
@@ -222,7 +222,7 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=400&fit=crop',
     author: {
-      name: 'Rendy Sales',
+      name: 'Mary Sales',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
       role: 'Sales Executive'
     },
@@ -254,7 +254,7 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=400&fit=crop',
     author: {
-      name: 'Rendy Sales',
+      name: 'Mary Sales',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
       role: 'Sales Executive'
     },

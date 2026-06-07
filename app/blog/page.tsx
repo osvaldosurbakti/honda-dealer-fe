@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blog & Berita - Tips dan Informasi Terbaru Honda',
-  description: 'Temukan tips merawat mobil, berita terbaru Honda, promo spesial, dan review mobil di blog Rendy Honda Surabaya.',
+  description: 'Temukan tips merawat mobil, berita terbaru Honda, promo spesial, dan review mobil di blog Mary Honda Surabaya.',
   keywords: 'blog honda, tips mobil, berita honda, review mobil, perawatan mobil',
 };
 

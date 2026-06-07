@@ -57,7 +57,7 @@ export default function HeroSection() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-slide-up">
                   Selamat Datang di{' '}
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-400 via-yellow-300 to-yellow-200 animate-gradient bg-300%">
-                    Rendy Honda Surabaya
+                    Mary Honda Surabaya
                   </span>
                 </h1>
               </div>
@@ -98,7 +98,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-500">
               <div className="flex flex-col sm:flex-row gap-3 flex-1">
                 <a
-                  href={`https://wa.me/6287852432636?text=${encodeURIComponent('Halo, saya tertarik dengan mobil Honda. Bisa info lebih lanjut?')}`}
+                  href={`https://wa.me/6285859369826?text=${encodeURIComponent('Halo, saya tertarik dengan mobil Honda. Bisa info lebih lanjut?')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 group"
@@ -117,7 +117,7 @@ export default function HeroSection() {
                 </a>
                 
                 <a 
-                  href="tel:087852432636"
+                  href="tel:085859369826"
                   className="flex-1 group"
                 >
                   <Button 

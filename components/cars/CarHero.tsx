@@ -140,7 +140,7 @@ export default function CarHero({ car }: CarHeroProps) {
               
               <div className="flex flex-row gap-2">
                 <a
-                  href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}. Bisa info detail dan test drive?`)}`}
+                  href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}. Bisa info detail dan test drive?`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg font-semibold hover:bg-green-600 transition text-center flex items-center justify-center gap-2 group text-sm"
@@ -150,7 +150,7 @@ export default function CarHero({ car }: CarHeroProps) {
                 </a>
                 
                 <a
-                  href="tel:087852432636"
+                  href="tel:085859369826"
                   className="flex-1 bg-blue-500 text-white px-3 py-2 rounded-lg font-semibold hover:bg-blue-600 transition text-center flex items-center justify-center gap-2 group text-sm"
                 >
                   <Phone className="w-4 h-4" />

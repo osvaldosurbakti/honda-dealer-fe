@@ -143,7 +143,7 @@ export default function FeaturesCTASection() {
                 <span className="font-bold">Dealer Resmi Honda</span>
               </div>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 lg:mb-4">
-                Daffa Honda{' '}
+                Mary Honda{' '}
                 <span className="bg-gradient-to-r from-red-400 to-red-300 bg-clip-text text-transparent animate-gradient">
                   Surabaya
                 </span>

@@ -113,7 +113,7 @@ export default function ProductCard({
               </Button>
             </Link>
             <a
-              href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}`)}`}
+              href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 min-w-0"
@@ -214,7 +214,7 @@ export default function ProductCard({
               </Button>
             </Link>
             <a
-              href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}`)}`}
+              href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 min-w-0"
@@ -315,7 +315,7 @@ export default function ProductCard({
             </Button>
           </Link>
           <a
-            href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}`)}`}
+            href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo, saya tertarik dengan ${car.name}`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1"

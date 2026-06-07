@@ -21,7 +21,7 @@ export default function MainCTASection({ car }: MainCTASectionProps) {
           </h2>
           <div className="w-32 h-1 bg-yellow-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl md:text-2xl mb-6 max-w-3xl mx-auto leading-relaxed font-light">
-            Jangan lewatkan penawaran spesial dan dapatkan harga terbaik langsung dari Rendy Honda
+            Jangan lewatkan penawaran spesial dan dapatkan harga terbaik langsung dari Mary Honda
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function MainCTASection({ car }: MainCTASectionProps) {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
           {/* WhatsApp Button - Primary */}
           <a
-            href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo Rendy, saya tertarik dengan ${car.name} ${car.model}. Bisa info detail harga ${car.priceRange}, spesifikasi, dan penawaran terbaiknya?`)}`}
+            href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo Mary, saya tertarik dengan ${car.name} ${car.model}. Bisa info detail harga ${car.priceRange}, spesifikasi, dan penawaran terbaiknya?`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-4 border-2 border-green-400 min-w-[280px]"
@@ -89,7 +89,7 @@ export default function MainCTASection({ car }: MainCTASectionProps) {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             {/* Phone Button */}
             <a
-              href="tel:087852432636"
+              href="tel:085859369826"
               className="group bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto flex items-center justify-center gap-3 border border-white/20 hover:border-white/40 min-w-[200px]"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export default function MainCTASection({ car }: MainCTASectionProps) {
 
             {/* Test Drive Button */}
             <a
-              href={`https://wa.me/6287852432636?text=${encodeURIComponent(`Halo Rendy, saya ingin jadwalkan test drive untuk ${car.name} ${car.model}. Kapan tersedia?`)}`}
+              href={`https://wa.me/6285859369826?text=${encodeURIComponent(`Halo Mary, saya ingin jadwalkan test drive untuk ${car.name} ${car.model}. Kapan tersedia?`)}`}
               className="group bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto flex items-center justify-center gap-3 border border-yellow-400 min-w-[200px]"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

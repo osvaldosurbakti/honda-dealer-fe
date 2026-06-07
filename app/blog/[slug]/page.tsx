@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
   
   if (!post) {
     return {
-      title: 'Artikel Tidak Ditemukan - Rendy Honda',
+      title: 'Artikel Tidak Ditemukan - Mary Honda',
     };
   }
 

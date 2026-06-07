@@ -37,7 +37,7 @@ export default function KontakPage() {
             Honda Sales Specialist
           </div>
           <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Hubungi <span className="text-red-600">Rendy</span>
+            Hubungi <span className="text-red-600">Mary</span>
           </h1>
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
             Saya siap membantu Anda menemukan mobil Honda impian dengan pelayanan terbaik. 

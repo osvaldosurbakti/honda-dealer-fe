@@ -59,7 +59,7 @@ export interface ContactInfo {
 
 export const contactInfo: ContactInfo = {
   dealer: {
-    name: 'Rendy Pambajeng Honda Surabaya',
+    name: 'Mary Pambajeng Honda Surabaya',
     address: ' Jl. Mayjen HR. Muhammad No.2B, Putat Gede, Kec. Sukomanunggal, Surabaya, Jawa Timur',
     city: 'Surabaya',
     province: 'Jawa Timur',
@@ -70,20 +70,20 @@ export const contactInfo: ContactInfo = {
     },
   },
   phones: {
-    primary: '087852432636'
+    primary: '085859369826'
     },
   emails: {
-    primary: 'rendyhondasurabaya@gmail.com',
-    sales: 'rendyhondasurabaya@gmail.com',
-    info: 'rendyhondasurabaya@gmail.com',
+    primary: 'maryutami86@gmail.com',
+    sales: 'maryutami86@gmail.com',
+    info: 'maryutami86@gmail.com',
   },
   whatsapp: {
-    number: '6287852432636',
+    number: '6285859369826',
     message: 'Halo, saya tertarik dengan mobil Honda. Bisa info lebih lanjut?',
     sales: [
       {
         name: 'Fikra Awan',
-        number: '6287852432636',
+        number: '6285859369826',
         specialization: ['HR-V', 'CR-V', 'BR-V'],
       },
       {
@@ -108,11 +108,11 @@ export const contactInfo: ContactInfo = {
   salesTeam: [
     {
       id: 'sales-1',
-      name: 'Rendy Honda',
+      name: 'Mary Christie',
       position: 'Sales Consultant',
-      phone: '087852432636',
-      whatsapp: '6287852432636',
-      email: 'rendyhondasurabaya@gmail.com',
+      phone: '085859369826',
+      whatsapp: '6285859369826',
+      email: 'maryutami86@gmail.com',
       photo: '/images/sales/rendy.jpg',
       specialization: ['HR-V', 'CR-V', 'BR-V', 'SUV Models'],
       experience: '5 tahun',
