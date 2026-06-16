@@ -46,11 +46,6 @@ const testimonials = [
     image: '/images/testimonial/testimonial-8.jpg',
     alt: 'Testimoni Pelanggan 8'
   },
-  {    
-    id: 9,
-    image: '/images/testimonial/testimonial-9.jpg',
-    alt: 'Testimoni Pelanggan 9'
-  },
 ];
 
 // Default aspect ratio (akan diupdate setelah images load)

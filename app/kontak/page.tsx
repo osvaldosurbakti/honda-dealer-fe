@@ -54,7 +54,7 @@ export default function KontakPage() {
                 <div className="relative self-center sm:self-auto">
                   <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-red-100 shadow-lg sm:shadow-xl">
                     <img 
-                      src={primarySales.photo || "/images/sales/rendy.jpg"} 
+                      src={primarySales.photo || "/images/sales/mary.jpeg"} 
                       alt={primarySales.name}
                       className="w-full h-full object-cover"
                     />
@@ -172,9 +172,9 @@ export default function KontakPage() {
                       href={`https://instagram.com/${contactInfo.socialMedia.instagram.replace('@', '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-col items-center p-3 sm:p-4 bg-gradient-to-r from-pink-50 to-purple-100 rounded-xl sm:rounded-2xl hover:from-pink-100 hover:to-purple-200 transition-all duration-300 border border-pink-200 shadow-sm hover:shadow-md"
+                      className="flex flex-col items-center p-3 sm:p-4 bg-linear-to-r from-pink-50 to-purple-100 rounded-xl sm:rounded-2xl hover:from-pink-100 hover:to-purple-200 transition-all duration-300 border border-pink-200 shadow-sm hover:shadow-md"
                     >
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 shadow-lg">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-linear-to-br from-pink-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 shadow-lg">
                         <Instagram className="text-white w-4 h-4 sm:w-6 sm:h-6" />
                       </div>
                       <span className="font-semibold text-gray-900 text-xs sm:text-sm">Instagram</span>
@@ -186,7 +186,7 @@ export default function KontakPage() {
                       href={`https://tiktok.com/${contactInfo.socialMedia.tiktok}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-col items-center p-3 sm:p-4 bg-gradient-to-r from-gray-800 to-black rounded-xl sm:rounded-2xl hover:from-gray-700 hover:to-gray-900 transition-all duration-300 border border-gray-700 shadow-sm hover:shadow-md"
+                      className="flex flex-col items-center p-3 sm:p-4 bg-linear-to-r from-gray-800 to-black rounded-xl sm:rounded-2xl hover:from-gray-700 hover:to-gray-900 transition-all duration-300 border border-gray-700 shadow-sm hover:shadow-md"
                     >
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 shadow-lg">
                         <TiktokIcon className="text-white w-4 h-4 sm:w-6 sm:h-6" />
@@ -198,7 +198,7 @@ export default function KontakPage() {
 
 
                 {/* Quick Tips */}
-<div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 border border-green-200">
+<div className="bg-linear-to-br from-green-50 to-green-100 rounded-2xl p-6 border border-green-200">
   <h4 className="font-bold text-green-900 mb-3 flex items-center">
     <MessageCircle className="w-4 h-4 mr-2" />
     Tips Cepat Hubungi
@@ -219,7 +219,7 @@ export default function KontakPage() {
   </ul>
 </div>
 
-<div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-6 border border-red-200">
+<div className="bg-linear-to-br from-red-50 to-red-100 rounded-2xl p-6 border border-red-200">
   <h4 className="font-bold text-red-900 mb-3 flex items-center">
     <Star className="w-4 h-4 mr-2 fill-red-500" />
     Penawaran Spesial
@@ -257,7 +257,7 @@ export default function KontakPage() {
             </div>
 
             {/* Service Buttons */}
-            <div className="bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center shadow-lg sm:shadow-2xl transform hover:scale-[1.01] sm:hover:scale-[1.02] transition-all duration-300">
+            <div className="bg-linear-to-br from-red-500 via-red-600 to-red-700 text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center shadow-lg sm:shadow-2xl transform hover:scale-[1.01] sm:hover:scale-[1.02] transition-all duration-300">
               <div className="flex items-center justify-center mb-4 sm:mb-6">
                 <Car className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3" />
                 <h3 className="text-xl sm:text-2xl font-bold">Layanan Eksklusif</h3>

@@ -13,7 +13,6 @@ const TimedPopup = ({
   delay = 5000, 
   brosurImages = [
     "/images/brosur/main.jpg",
-    "/images/brosur/brosur1.jpg", 
     "/images/brosur/brosur2.jpg",
     "/images/brosur/brosur3.jpg"
   ],

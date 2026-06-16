@@ -9,7 +9,8 @@ import {
 } from 'lucide-react';
 import { 
   FaTiktok,
-  FaFacebookF
+  FaFacebookF,
+  FaInstagram
 } from 'react-icons/fa';
 
 export default function CTASection() {
@@ -67,59 +68,75 @@ export default function CTASection() {
         </a>
 
         {/* Social Media Section */}
-        <div className="pt-4 border-t border-gray-200">
-          <p className="text-xs text-gray-500 mb-3 font-medium">Follow Kami:</p>
-          
-          <div className="flex justify-center lg:justify-start space-x-3">
-            {/* TikTok Button */}
-            {contactInfo.socialMedia.tiktok && (
-              <a 
-                href={`https://tiktok.com/${contactInfo.socialMedia.tiktok}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 max-w-24 bg-gradient-to-r from-gray-900 to-gray-700 text-white px-4 py-2 rounded-lg font-semibold hover:from-gray-800 hover:to-gray-600 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
-              >
-                <FaTiktok className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span className="text-xs">TikTok</span>
-              </a>
-            )}
+{/* Social Media Section */}
+<div className="pt-4 border-t border-gray-200">
+  <p className="text-xs text-gray-500 mb-3 font-medium">Follow Kami:</p>
+  
+  <div className="flex justify-center lg:justify-start space-x-3 flex-wrap gap-y-3">
+    {/* TikTok Button */}
+    {contactInfo.socialMedia.tiktok && (
+      <a 
+        href={contactInfo.socialMedia.tiktok}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex-1 max-w-24 bg-gradient-to-r from-gray-900 to-gray-700 text-white px-4 py-2 rounded-lg font-semibold hover:from-gray-800 hover:to-gray-600 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
+      >
+        <FaTiktok className="w-4 h-4 group-hover:scale-110 transition-transform" />
+        <span className="text-xs">TikTok</span>
+      </a>
+    )}
 
-            {/* Facebook Button */}
-            {contactInfo.socialMedia.facebook && (
-              <a 
-                href={contactInfo.socialMedia.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 max-w-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
-              >
-                <FaFacebookF className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span className="text-xs">Facebook</span>
-              </a>
-            )}
+    {/* Facebook Button */}
+    {contactInfo.socialMedia.facebook && (
+      <a 
+        href={contactInfo.socialMedia.facebook}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex-1 max-w-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
+      >
+        <FaFacebookF className="w-4 h-4 group-hover:scale-110 transition-transform" />
+        <span className="text-xs">Facebook</span>
+      </a>
+    )}
 
-            {/* Share Button - Fallback jika social media tidak ada */}
-            {!contactInfo.socialMedia.tiktok && !contactInfo.socialMedia.facebook && (
-              <button
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: 'Mary Honda Surabaya',
-                      text: 'Temukan mobil Honda terbaru dengan penawaran spesial',
-                      url: window.location.href,
-                    });
-                  } else {
-                    navigator.clipboard.writeText(window.location.href);
-                    alert('Link berhasil disalin!');
-                  }
-                }}
-                className="flex-1 max-w-24 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
-              >
-                <Share2 className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span className="text-xs">Share</span>
-              </button>
-            )}
-          </div>
-        </div>
+    {/* Instagram Button */}
+    {contactInfo.socialMedia.instagram && (
+      <a 
+href={contactInfo.socialMedia.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex-1 max-w-24 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
+      >
+        <FaInstagram className="w-4 h-4 group-hover:scale-110 transition-transform" />
+        <span className="text-xs">Instagram</span>
+      </a>
+    )}
+
+    {/* Share Button - Fallback */}
+    {!contactInfo.socialMedia.tiktok &&
+      !contactInfo.socialMedia.facebook &&
+      !contactInfo.socialMedia.instagram && (
+        <button
+          onClick={() => {
+            if (navigator.share) {
+              navigator.share({
+                title: 'Mary Honda Surabaya',
+                text: 'Temukan mobil Honda terbaru dengan penawaran spesial',
+                url: window.location.href,
+              });
+            } else {
+              navigator.clipboard.writeText(window.location.href);
+              alert('Link berhasil disalin!');
+            }
+          }}
+          className="flex-1 max-w-24 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 group"
+        >
+          <Share2 className="w-4 h-4 group-hover:scale-110 transition-transform" />
+          <span className="text-xs">Share</span>
+        </button>
+      )}
+  </div>
+</div>
       </div>
     </div>
   );

@@ -213,7 +213,7 @@ export const siteConfig: SiteConfig = {
   keywords: [
     'honda surabaya', 'dealer honda surabaya', 'mobil honda surabaya', 'hr-v surabaya', 'cr-v surabaya',
     'brio surabaya', 'civic surabaya', 'kredit mobil honda', 'test drive honda', 'honda surabaya timur',
-    'dealer honda hr muhammad', 'honda prisma surabaya', 'jual mobil honda surabaya', 'showroom honda surabaya',
+    'dealer honda hr muhammad', 'honda istana mobil surabaya', 'jual mobil honda surabaya', 'showroom honda surabaya',
     'service honda surabaya', 'spare part honda', 'promo honda surabaya', 'honda surabaya murah',
     'honda surabaya terpercaya', 'mary christie honda surabaya', 'honda surabaya pusat'
   ],
@@ -227,7 +227,7 @@ export const siteConfig: SiteConfig = {
   // Company Information
   company: {
     name: 'Mary Christie Honda Surabaya',
-    legalName: 'PT. Honda Prisma - Authorized Honda Dealer Surabaya',
+    legalName: 'PT. Honda Istana Mobil Surabaya Indah - Authorized Honda Dealer Surabaya',
     description: 'Dealer resmi Honda terpercaya di Surabaya Timur dengan pengalaman lebih dari 10 tahun melayani masyarakat Jawa Timur. Menyediakan mobil Honda baru & bekas berkualitas dengan pelayanan terbaik, promo menarik, dan after-sales service profesional.',
     foundingYear: 2010,
     dealerCode: 'HND-PRS-SBY',
@@ -246,7 +246,7 @@ export const siteConfig: SiteConfig = {
       phone: '+6231-1234-5678',
       phoneFormatted: '(031) 1234-5678',
       whatsapp: '+6281234567890',
-      email: 'info@hondaprismasurabaya.com',
+      email: 'customercare@hondaeastjava.com',
       emergencyContact: '+6281234567891'
     },
     operatingHours: {
@@ -272,7 +272,7 @@ export const siteConfig: SiteConfig = {
   // SEO Configuration
   seo: {
     titleTemplate: '%s | Mary Christie - Dealer Resmi Honda Surabaya',
-    defaultTitle: 'Dealer Resmi Honda Surabaya - Honda Prisma HR Muhammad | Penjualan & Service',
+    defaultTitle: 'Dealer Resmi Honda Surabaya - Honda Istana Mobil Surabaya Indah | Penjualan & Service',
     titleSeparator: '|',
     defaultDescription: 'Dealer resmi Honda di Surabaya Timur. Mobil baru Honda HR-V, CR-V, Brio, Civic, City. Kredit DP 10%, test drive gratis, promo spesial. Service & spare part original.',
     siteLanguage: 'id',
@@ -329,8 +329,8 @@ export const siteConfig: SiteConfig = {
   // Social Media Links
   social: {
     facebook: 'https://www.facebook.com/share/1CThcKHE5Z/',
-    instagram: 'https://instagram.com/marychristiehonda',
-    tiktok: 'https://tiktok.com/@marychristiehonda',
+    instagram: 'https://instagram.com/maryhondasurabaya',
+    tiktok: 'https://tiktok.com/@cecehondasurabaya',
     youtube: 'https://youtube.com/@marychristiehonda',
     linkedin: 'https://linkedin.com/company/mary-christie-honda-surabaya'
   },

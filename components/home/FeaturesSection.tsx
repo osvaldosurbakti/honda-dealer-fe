@@ -30,15 +30,15 @@ export default function FeaturesCTASection() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("/images/backgroundrendy.jpg")',
+          backgroundImage: 'url("/images/background.jpg")',
         }}
       />
       
       {/* Overlay Gradient untuk meningkatkan readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/70 to-slate-800/90" />
+      <div className="absolute inset-0 bg-linear-to-br from-slate-900/80 via-blue-900/70 to-slate-800/90" />
       
       {/* Additional Pattern Overlay untuk texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/20 to-black/40" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-transparent via-black/20 to-black/40" />
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 animate-bounce">
@@ -63,7 +63,7 @@ export default function FeaturesCTASection() {
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Temukan Mobil Honda{' '}
-                <span className="bg-gradient-to-r from-red-400 to-red-300 bg-clip-text text-transparent animate-gradient">
+                <span className="bg-linear-to-r from-red-400 to-red-300 bg-clip-text text-transparent animate-gradient">
                   Perfect Match
                 </span>{' '}
                 untuk Anda
@@ -71,7 +71,7 @@ export default function FeaturesCTASection() {
               <p className="text-lg sm:text-xl text-gray-200 leading-relaxed">
                 "...Saya siap membantu menemukan pilihan Mobil Honda yang paling tepat sesuai kebutuhan dan budget Anda..."
               </p>
-              <div className="w-20 lg:w-24 h-1.5 bg-gradient-to-r from-honda-red to-red-400 rounded-full mx-auto lg:mx-0"></div>
+              <div className="w-20 lg:w-24 h-1.5 bg-linear-to-r from-honda-red to-red-400 rounded-full mx-auto lg:mx-0"></div>
             </div>
 
             {/* Contact Cards */}
@@ -79,7 +79,7 @@ export default function FeaturesCTASection() {
               {/* Quick Contact Card */}
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 lg:p-8 shadow-2xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <h3 className="text-xl lg:text-2xl font-bold text-white mb-4 lg:mb-6 flex items-center gap-3">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-honda-red to-red-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-linear-to-br from-honda-red to-red-600 rounded-xl flex items-center justify-center shadow-lg">
                     <MessageCircle className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                   </div>
                   <span>Ingin Info Lebih Cepat?</span>
@@ -88,7 +88,7 @@ export default function FeaturesCTASection() {
                 <div className="space-y-3 lg:space-y-4">
                   {/* Phone/WhatsApp */}
                   <div className="flex items-center gap-3 lg:gap-4 p-3 lg:p-4 bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl border border-white/20 group hover:bg-white/20 transition-all duration-300">
-                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-linear-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <FaWhatsapp className="text-white text-xl lg:text-2xl" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -115,7 +115,7 @@ export default function FeaturesCTASection() {
 
                   {/* Email */}
                   <div className="flex items-center gap-3 lg:gap-4 p-3 lg:p-4 bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl border border-white/20 group hover:bg-white/20 transition-all duration-300">
-                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Mail className="text-white text-xl lg:text-2xl" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -144,11 +144,11 @@ export default function FeaturesCTASection() {
               </div>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 lg:mb-4">
                 Mary Honda{' '}
-                <span className="bg-gradient-to-r from-red-400 to-red-300 bg-clip-text text-transparent animate-gradient">
+                <span className="bg-linear-to-r from-red-400 to-red-300 bg-clip-text text-transparent animate-gradient">
                   Surabaya
                 </span>
               </h3>
-              <div className="w-16 lg:w-20 h-1.5 bg-gradient-to-r from-honda-red to-red-400 rounded-full mx-auto lg:mx-0"></div>
+              <div className="w-16 lg:w-20 h-1.5 bg-linear-to-r from-honda-red to-red-400 rounded-full mx-auto lg:mx-0"></div>
             </div>
 
             {/* Main Description */}
@@ -160,7 +160,7 @@ export default function FeaturesCTASection() {
                   dengan <strong className="text-white">DP Rendah dan Angsuran Terjangkau</strong>.
                 </p>
 
-                <div className="bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border border-amber-400/30 rounded-xl p-4 text-center animate-pulse backdrop-blur-sm">
+                <div className="bg-linear-to-r from-amber-500/20 to-yellow-500/20 border border-amber-400/30 rounded-xl p-4 text-center animate-pulse backdrop-blur-sm">
                   <p className="text-amber-200 text-sm font-medium">
                     💡 <strong>Harga promo dan cashback tersedia!</strong> Hubungi kami untuk info terbaru.
                   </p>
@@ -184,7 +184,7 @@ export default function FeaturesCTASection() {
                       rel="noopener noreferrer"
                       className="group"
                     >
-                      <div className="w-full aspect-square bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group-hover:from-blue-700 group-hover:to-blue-800 p-3 backdrop-blur-sm">
+                      <div className="w-full aspect-square bg-linear-to-br from-blue-600 to-blue-700 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group-hover:from-blue-700 group-hover:to-blue-800 p-3 backdrop-blur-sm">
                         <FaFacebookF className="text-lg lg:text-2xl mb-1 lg:mb-2" />
                         <span className="text-xs font-semibold text-center">Facebook</span>
                       </div>
@@ -197,7 +197,7 @@ export default function FeaturesCTASection() {
                       rel="noopener noreferrer"
                       className="group"
                     >
-                      <div className="w-full aspect-square bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-3 backdrop-blur-sm">
+                      <div className="w-full aspect-square bg-linear-to-br from-purple-600 via-pink-600 to-orange-500 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-3 backdrop-blur-sm">
                         <FaInstagram className="text-lg lg:text-2xl mb-1 lg:mb-2" />
                         <span className="text-xs font-semibold text-center">Instagram</span>
                       </div>
@@ -210,7 +210,7 @@ export default function FeaturesCTASection() {
                       rel="noopener noreferrer"
                       className="group"
                     >
-                      <div className="w-full aspect-square bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-3 backdrop-blur-sm">
+                      <div className="w-full aspect-square bg-linear-to-br from-gray-900 to-gray-800 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-3 backdrop-blur-sm">
                         <FaTiktok className="text-lg lg:text-2xl mb-1 lg:mb-2" />
                         <span className="text-xs font-semibold text-center">TikTok</span>
                       </div>
@@ -220,7 +220,7 @@ export default function FeaturesCTASection() {
                     href="/kontak"
                     className="group"
                   >
-                    <div className="w-full aspect-square bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-3 backdrop-blur-sm">
+                    <div className="w-full aspect-square bg-linear-to-br from-gray-600 to-gray-700 rounded-xl lg:rounded-2xl flex flex-col items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-3 backdrop-blur-sm">
                       <MessageCircle className="w-5 h-5 lg:w-6 lg:h-6 mb-1 lg:mb-2" />
                       <span className="text-xs font-semibold text-center">Lainnya</span>
                     </div>
@@ -237,8 +237,8 @@ export default function FeaturesCTASection() {
         }`}>
           <div className="relative">
             {/* Background Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-honda-red/90 to-red-600/90 rounded-2xl lg:rounded-3xl shadow-xl lg:shadow-2xl transform -skew-y-1 lg:-skew-y-2 backdrop-blur-sm"></div>
-            <div className="relative bg-gradient-to-r from-honda-red/80 to-red-600/80 rounded-2xl lg:rounded-3xl p-6 lg:p-12 shadow-xl lg:shadow-2xl border border-red-400/30 backdrop-blur-md">
+            <div className="absolute inset-0 bg-linear-to-r from-honda-red/90 to-red-600/90 rounded-2xl lg:rounded-3xl shadow-xl lg:shadow-2xl transform -skew-y-1 lg:-skew-y-2 backdrop-blur-sm"></div>
+            <div className="relative bg-linear-to-r from-honda-red/80 to-red-600/80 rounded-2xl lg:rounded-3xl p-6 lg:p-12 shadow-xl lg:shadow-2xl border border-red-400/30 backdrop-blur-md">
               <div className="flex items-center justify-center mb-3 lg:mb-4">
                 <div className="w-8 h-8 lg:w-12 lg:h-12 bg-white/20 rounded-full flex items-center justify-center mr-3">
                   <Sparkles className="w-4 h-4 lg:w-6 lg:h-6 text-white" />

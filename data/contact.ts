@@ -59,11 +59,11 @@ export interface ContactInfo {
 
 export const contactInfo: ContactInfo = {
   dealer: {
-    name: 'Mary Pambajeng Honda Surabaya',
-    address: ' Jl. Mayjen HR. Muhammad No.2B, Putat Gede, Kec. Sukomanunggal, Surabaya, Jawa Timur',
+    name: 'Mary Christie Honda Surabaya',
+    address: ' Honda Istana Mobil Surabaya Indah, Jl. Jend. Basuki Rachmat No. 33-37, Embong Kaliasin, Genteng',
     city: 'Surabaya',
     province: 'Jawa Timur',
-    postalCode: '60189',
+    postalCode: '60271',
     coordinates: {
       lat: -7.250445,
       lng: 112.768845,
@@ -81,29 +81,20 @@ export const contactInfo: ContactInfo = {
     number: '6285859369826',
     message: 'Halo, saya tertarik dengan mobil Honda. Bisa info lebih lanjut?',
     sales: [
-      {
-        name: 'Fikra Awan',
-        number: '6285859369826',
-        specialization: ['HR-V', 'CR-V', 'BR-V'],
-      },
-      {
-        name: 'Sales Honda 2',
-        number: '6285150655710',
-        specialization: ['Brio', 'Mobilio', 'Jazz'],
-      },
     ],
   },
   socialMedia: {
-    facebook: 'https://www.facebook.com/share/1CThcKHE5Z/',
-    tiktok: '@rendyhonda',
+    facebook: 'https://www.facebook.com/share/1CkrpJFN9Q/',
+    instagram: 'https://instagram.com/maryhondasurabaya',
+    tiktok: 'https://tiktok.com/@cecehondasurabaya',
   },
   workingHours: {
     days: 'Everyday',
     hours: '24 Hours',
   },
     maps: {
-    embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63321.62517524256!2d112.66129752283722!3d-7.286090828765811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fda9b71de18d%3A0xcbf8ea89e4e029af!2sHonda%20Prisma%20HR%20Muhammad!5e0!3m2!1sen!2sid!4v1763277260243!5m2!1sen!2sid',
-    directUrl: 'https://maps.google.com/?q=Honda+Prisma+HR+Muhammad'
+    embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.786243170802!2d112.7413055!3d-7.265150399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f94c5cd66cc7%3A0x1e543c6b695b8b99!2sHonda%20Surabaya%20Center!5e0!3m2!1sen!2sid!4v1781613623653!5m2!1sen!2sid',
+    directUrl: 'https://maps.app.goo.gl/2oypA6qscoHETbt17'
   },
   salesTeam: [
     {
@@ -113,7 +104,7 @@ export const contactInfo: ContactInfo = {
       phone: '085859369826',
       whatsapp: '6285859369826',
       email: 'maryutami86@gmail.com',
-      photo: '/images/sales/rendy.jpg',
+      photo: '/images/sales/mary.jpeg',
       specialization: ['HR-V', 'CR-V', 'BR-V', 'SUV Models'],
       experience: '5 tahun',
       languages: ['Indonesia', 'English Basic'],
