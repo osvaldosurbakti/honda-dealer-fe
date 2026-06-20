@@ -1,5 +1,3 @@
-'use client'; // ← TAMBAHKAN INI
-
 import { BlogPost } from '@/types/blog';
 import BlogCard from './BlogCard';
 

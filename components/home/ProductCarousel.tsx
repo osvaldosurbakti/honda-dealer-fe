@@ -238,7 +238,7 @@ export default function ProductCarousel({
               {slides.map((_, slideIndex) => (
                 <div 
                   key={slideIndex}
-                  className="flex-shrink-0 w-full flex gap-2 sm:gap-3 lg:gap-4"
+                  className="shrink-0 w-full flex gap-2 sm:gap-3 lg:gap-4"
                 >
                   {cars
                     .slice(slideIndex * itemsPerView, (slideIndex + 1) * itemsPerView)

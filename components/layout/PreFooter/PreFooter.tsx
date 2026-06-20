@@ -1,5 +1,3 @@
-'use client';
-
 import { lazy, Suspense } from 'react';
 import TrustSection from './TrustSection';
 import CTASection from './CTASection';
@@ -10,7 +8,7 @@ const BlogPreview = lazy(() => import('./BlogPreview'));
 
 export default function PreFooter() {
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-white border-t border-gray-200/60 relative overflow-hidden">
+    <div className="bg-linear-to-br from-gray-50 to-white border-t border-gray-200/60 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#000_1px,transparent_0)] bg-[length:40px_40px]"></div>

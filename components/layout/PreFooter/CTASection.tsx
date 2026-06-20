@@ -1,5 +1,3 @@
-'use client';
-
 import { contactInfo } from '@/data/contact';
 import { 
   Car,

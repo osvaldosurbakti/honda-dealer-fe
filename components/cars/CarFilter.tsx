@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { Car } from '@/types/car';
 import Card from '@/components/ui/Card';

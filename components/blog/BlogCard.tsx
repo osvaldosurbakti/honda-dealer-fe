@@ -1,5 +1,3 @@
-'use client'; // ← TAMBAHKAN INI DI BARIS PERTAMA
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { BlogPost } from '@/types/blog';

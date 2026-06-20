@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, use } from 'react';
 import Button from '@/components/ui/Button';
 import { Star, Shield, Phone, MessageCircle, Award, Users } from 'lucide-react';
 

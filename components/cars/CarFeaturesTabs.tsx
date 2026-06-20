@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { CarFeatureSections, CarSpecs } from '@/types/car';
 
@@ -105,7 +103,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         if (!features?.exterior) return null;
         return (
           <div className="animate-fadeIn">
-            <div className="bg-gradient-to-r from-blue-50 to-white p-8 rounded-2xl mb-8">
+            <div className="bg-linear-to-r from-blue-50 to-white p-8 rounded-2xl mb-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">{features.exterior.title}</h3>
               <p className="text-lg text-gray-700 leading-relaxed">{features.exterior.description}</p>
             </div>
@@ -113,7 +111,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.exterior.features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
                     <span className="text-blue-600 text-lg font-bold">✓</span>
                   </div>
                   <div>
@@ -130,7 +128,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         if (!features?.interior) return null;
         return (
           <div className="animate-fadeIn">
-            <div className="bg-gradient-to-r from-purple-50 to-white p-8 rounded-2xl mb-8">
+            <div className="bg-linear-to-r from-purple-50 to-white p-8 rounded-2xl mb-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">{features.interior.title}</h3>
               <p className="text-lg text-gray-700 leading-relaxed">{features.interior.description}</p>
             </div>
@@ -138,7 +136,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.interior.features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
-                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center shrink-0">
                     <span className="text-purple-600 text-lg font-bold">✓</span>
                   </div>
                   <div>
@@ -155,7 +153,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         if (!features?.safety) return null;
         return (
           <div className="animate-fadeIn">
-            <div className="bg-gradient-to-r from-green-50 to-white p-8 rounded-2xl mb-8">
+            <div className="bg-linear-to-r from-green-50 to-white p-8 rounded-2xl mb-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">{features.safety.title}</h3>
               <p className="text-lg text-gray-700 leading-relaxed">{features.safety.description}</p>
             </div>
@@ -163,7 +161,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.safety.features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center shrink-0">
                     <span className="text-green-600 text-lg font-bold">🛡️</span>
                   </div>
                   <div>
@@ -180,7 +178,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         if (!features?.technology) return null;
         return (
           <div className="animate-fadeIn">
-            <div className="bg-gradient-to-r from-orange-50 to-white p-8 rounded-2xl mb-8">
+            <div className="bg-linear-to-r from-orange-50 to-white p-8 rounded-2xl mb-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">{features.technology.title}</h3>
               <p className="text-lg text-gray-700 leading-relaxed">{features.technology.description}</p>
             </div>
@@ -188,7 +186,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.technology.features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
-                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center shrink-0">
                     <span className="text-orange-600 text-lg font-bold">⚡</span>
                   </div>
                   <div>
@@ -205,7 +203,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
         if (!specs) return null;
         return (
           <div className="animate-fadeIn">
-            <div className="bg-gradient-to-r from-red-50 to-white p-8 rounded-2xl mb-8">
+            <div className="bg-linear-to-r from-red-50 to-white p-8 rounded-2xl mb-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Spesifikasi Teknis Lengkap</h3>
               <p className="text-lg text-gray-700">Detail spesifikasi dan performa kendaraan</p>
             </div>
@@ -301,7 +299,7 @@ export default function CarFeaturesTabs({ features, specs }: CarFeaturesTabsProp
   }
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-white py-16">
+    <section className="bg-linear-to-br from-gray-50 to-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

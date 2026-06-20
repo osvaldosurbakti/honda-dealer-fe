@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { Car } from '@/types/car';
 import { Phone, MessageCircle, Settings, Fuel, Users, Luggage } from 'lucide-react';

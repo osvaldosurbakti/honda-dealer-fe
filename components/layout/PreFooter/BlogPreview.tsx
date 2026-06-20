@@ -1,5 +1,3 @@
-'use client';
-
 import { getRecentPosts } from '@/data/blog';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,7 +14,7 @@ export default function BlogPreview() {
     <div className="text-center lg:text-left">
       {/* Header */}
       <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6">
-        <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+        <div className="w-12 h-12 bg-linear-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
           <BookOpen className="text-white text-xl" />
         </div>
         <div>
@@ -35,7 +33,7 @@ export default function BlogPreview() {
           >
             <div className="flex space-x-4">
               {/* Image */}
-              <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden">
+              <div className="relative w-16 h-16 shrink-0 rounded-lg overflow-hidden">
                 <Image
                   src={post.featuredImage}
                   alt={post.title}

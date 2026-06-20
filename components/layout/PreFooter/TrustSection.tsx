@@ -1,5 +1,3 @@
-'use client';
-
 import { 
   Shield,
   Award,
@@ -14,7 +12,7 @@ export default function TrustSection() {
     <div className="text-center lg:text-left">
       {/* Header */}
       <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6">
-        <div className="w-12 h-12 bg-gradient-to-br from-honda-red to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
+        <div className="w-12 h-12 bg-linear-to-br from-honda-red to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
           <FaShieldAlt className="text-white text-xl" />
         </div>
         <div>
@@ -26,19 +24,19 @@ export default function TrustSection() {
       {/* Trust Points */}
       <div className="space-y-4 mb-6">
         <div className="flex items-center space-x-3 text-gray-700">
-          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+          <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
           <span className="text-sm">Authorized Honda Dealer</span>
         </div>
         <div className="flex items-center space-x-3 text-gray-700">
-          <Award className="w-5 h-5 text-honda-red flex-shrink-0" />
+          <Award className="w-5 h-5 text-honda-red shrink-0" />
           <span className="text-sm">Garansi resmi 3 tahun</span>
         </div>
         <div className="flex items-center space-x-3 text-gray-700">
-          <Users className="w-5 h-5 text-blue-500 flex-shrink-0" />
+          <Users className="w-5 h-5 text-blue-500 shrink-0" />
           <span className="text-sm">1,000+ pelanggan puas</span>
         </div>
         <div className="flex items-center space-x-3 text-gray-700">
-          <Shield className="w-5 h-5 text-green-600 flex-shrink-0" />
+          <Shield className="w-5 h-5 text-green-600 shrink-0" />
           <span className="text-sm">Service after-sales lengkap</span>
         </div>
       </div>
